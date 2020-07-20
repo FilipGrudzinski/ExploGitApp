@@ -34,6 +34,10 @@
 		DC1AA4FE24C621360002EFA0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA4FD24C621360002EFA0 /* MainViewController.swift */; };
 		DC1AA50024C621400002EFA0 /* MainViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA4FF24C621400002EFA0 /* MainViewController.xib */; };
 		DC1AA50224C6214C0002EFA0 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50124C6214C0002EFA0 /* MainViewModel.swift */; };
+		DC1AA50424C627610002EFA0 /* BaseTargetType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50324C627610002EFA0 /* BaseTargetType.swift */; };
+		DC1AA50624C62ADA0002EFA0 /* GeneralAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50524C62ADA0002EFA0 /* GeneralAPIService.swift */; };
+		DC1AA50824C62D810002EFA0 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50724C62D810002EFA0 /* APIWorker.swift */; };
+		DC1AA50B24C62E420002EFA0 /* ReposSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50A24C62E420002EFA0 /* ReposSearchResponse.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -67,6 +71,10 @@
 		DC1AA4FD24C621360002EFA0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		DC1AA4FF24C621400002EFA0 /* MainViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewController.xib; sourceTree = "<group>"; };
 		DC1AA50124C6214C0002EFA0 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		DC1AA50324C627610002EFA0 /* BaseTargetType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTargetType.swift; sourceTree = "<group>"; };
+		DC1AA50524C62ADA0002EFA0 /* GeneralAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPIService.swift; sourceTree = "<group>"; };
+		DC1AA50724C62D810002EFA0 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
+		DC1AA50A24C62E420002EFA0 /* ReposSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposSearchResponse.swift; sourceTree = "<group>"; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -190,6 +198,7 @@
 		DC1AA4D124C61D830002EFA0 /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				DC1AA50724C62D810002EFA0 /* APIWorker.swift */,
 			);
 			path = Workers;
 			sourceTree = "<group>";
@@ -205,7 +214,10 @@
 		DC1AA4D324C61D990002EFA0 /* Networking */ = {
 			isa = PBXGroup;
 			children = (
+				DC1AA50924C62E100002EFA0 /* Responses */,
 				DC1AA4F324C6201F0002EFA0 /* APIError */,
+				DC1AA50324C627610002EFA0 /* BaseTargetType.swift */,
+				DC1AA50524C62ADA0002EFA0 /* GeneralAPIService.swift */,
 			);
 			path = Networking;
 			sourceTree = "<group>";
@@ -237,6 +249,14 @@
 				DC1AA50124C6214C0002EFA0 /* MainViewModel.swift */,
 			);
 			path = MainViewController;
+			sourceTree = "<group>";
+		};
+		DC1AA50924C62E100002EFA0 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				DC1AA50A24C62E420002EFA0 /* ReposSearchResponse.swift */,
+			);
+			path = Responses;
 			sourceTree = "<group>";
 		};
 		EA6C95BED1C04278735BE1BC /* Frameworks */ = {
@@ -365,6 +385,7 @@
 				DC1AA4E024C61F630002EFA0 /* StringExtensions.swift in Sources */,
 				DC1AA4FE24C621360002EFA0 /* MainViewController.swift in Sources */,
 				DC1AA4EE24C61FEC0002EFA0 /* UIViewExtensionsNib.swift in Sources */,
+				DC1AA50624C62ADA0002EFA0 /* GeneralAPIService.swift in Sources */,
 				DC1AA4D624C61EE00002EFA0 /* MainNavigationController.swift in Sources */,
 				DC1AA4E224C61F850002EFA0 /* BundleExtension.swift in Sources */,
 				DC1AA4D824C61EFC0002EFA0 /* CommonViewController.swift in Sources */,
@@ -373,6 +394,7 @@
 				DC1AA4BC24C617EA0002EFA0 /* ViewController.swift in Sources */,
 				DC1AA4F224C6200F0002EFA0 /* LayerExtension.swift in Sources */,
 				DC1AA4E424C61F950002EFA0 /* CollectionExtension.swift in Sources */,
+				DC1AA50424C627610002EFA0 /* BaseTargetType.swift in Sources */,
 				DC1AA4B824C617EA0002EFA0 /* AppDelegate.swift in Sources */,
 				DC1AA4DA24C61F0C0002EFA0 /* CommonModalNavigationController.swift in Sources */,
 				DC1AA4DC24C61F1E0002EFA0 /* ApplicationCoordinator.swift in Sources */,
@@ -380,6 +402,8 @@
 				DC1AA4DE24C61F330002EFA0 /* MainCoordinatorProtocol.swift in Sources */,
 				DC1AA4E824C61FB30002EFA0 /* UIColorExtension.swift in Sources */,
 				DC1AA4FB24C620EE0002EFA0 /* UICollectionViewExtension.swift in Sources */,
+				DC1AA50824C62D810002EFA0 /* APIWorker.swift in Sources */,
+				DC1AA50B24C62E420002EFA0 /* ReposSearchResponse.swift in Sources */,
 				DC1AA4F924C6206D0002EFA0 /* ActivityIndicator.swift in Sources */,
 				DC1AA4EA24C61FC30002EFA0 /* UIFontExtension.swift in Sources */,
 				DC1AA4EC24C61FDC0002EFA0 /* UITableViewExtension.swift in Sources */,

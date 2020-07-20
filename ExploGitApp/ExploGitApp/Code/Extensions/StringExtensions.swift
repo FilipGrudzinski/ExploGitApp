@@ -40,4 +40,8 @@ extension String {
     func removeHtmlTags() -> String {
         return self.replacingOccurrences(of: String.htmlTags, with: String.empty, options: .regularExpression, range: nil)
     }
+    
+    func convertSearchQuery() -> String {
+        return self.replacingOccurrences(of: " ", with: "+")
+    }
 }

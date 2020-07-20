@@ -22,9 +22,19 @@ final class MainViewModel {
     weak var delegate: MainViewModelDelegate!
     
     private let coordinator: MainCoordinatorProtocol
+    private let worker: APIWorkerProtocol = APIWorker()
     
     init(_ coordinator: MainCoordinatorProtocol) {
         self.coordinator = coordinator
+    }
+    
+    private func search(_ query: String) {
+        worker.fetchReposSearch(query)
+            .done { response in
+                print(response)
+        } .catch { error in
+            print(error)
+        }
     }
 }
 
@@ -33,5 +43,6 @@ extension MainViewModel: MainViewModelProtocol {
     
     func onViewDidLoad() {
         #warning("TO DO")
+        search("fgrepo")
     }
 }
