@@ -38,6 +38,11 @@
 		DC1AA50624C62ADA0002EFA0 /* GeneralAPIService.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50524C62ADA0002EFA0 /* GeneralAPIService.swift */; };
 		DC1AA50824C62D810002EFA0 /* APIWorker.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50724C62D810002EFA0 /* APIWorker.swift */; };
 		DC1AA50B24C62E420002EFA0 /* ReposSearchResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50A24C62E420002EFA0 /* ReposSearchResponse.swift */; };
+		DC1AA50E24C649250002EFA0 /* CGFloatExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA50D24C649250002EFA0 /* CGFloatExtension.swift */; };
+		DC1AA51024C64ABF0002EFA0 /* MainViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA50F24C64ABF0002EFA0 /* MainViewCell.xib */; };
+		DC1AA51224C64AEC0002EFA0 /* MainViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA51124C64AEC0002EFA0 /* MainViewCell.swift */; };
+		DC1AA51524C64B540002EFA0 /* MainViewRenderable.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA51424C64B540002EFA0 /* MainViewRenderable.swift */; };
+		DC1AA51724C651210002EFA0 /* Localized.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA51624C651210002EFA0 /* Localized.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -75,6 +80,11 @@
 		DC1AA50524C62ADA0002EFA0 /* GeneralAPIService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GeneralAPIService.swift; sourceTree = "<group>"; };
 		DC1AA50724C62D810002EFA0 /* APIWorker.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIWorker.swift; sourceTree = "<group>"; };
 		DC1AA50A24C62E420002EFA0 /* ReposSearchResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReposSearchResponse.swift; sourceTree = "<group>"; };
+		DC1AA50D24C649250002EFA0 /* CGFloatExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CGFloatExtension.swift; sourceTree = "<group>"; };
+		DC1AA50F24C64ABF0002EFA0 /* MainViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainViewCell.xib; sourceTree = "<group>"; };
+		DC1AA51124C64AEC0002EFA0 /* MainViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCell.swift; sourceTree = "<group>"; };
+		DC1AA51424C64B540002EFA0 /* MainViewRenderable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewRenderable.swift; sourceTree = "<group>"; };
+		DC1AA51624C651210002EFA0 /* Localized.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Localized.swift; sourceTree = "<group>"; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -176,6 +186,7 @@
 				DC1AA4EF24C61FFC0002EFA0 /* MoyaExtensions.swift */,
 				DC1AA4F124C6200F0002EFA0 /* LayerExtension.swift */,
 				DC1AA4FA24C620EE0002EFA0 /* UICollectionViewExtension.swift */,
+				DC1AA50D24C649250002EFA0 /* CGFloatExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -228,6 +239,7 @@
 				DC1AA4C024C617EA0002EFA0 /* Assets.xcassets */,
 				DC1AA4C224C617EA0002EFA0 /* LaunchScreen.storyboard */,
 				DC1AA4C524C617EA0002EFA0 /* Info.plist */,
+				DC1AA51624C651210002EFA0 /* Localized.swift */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -244,6 +256,8 @@
 		DC1AA4FC24C6212D0002EFA0 /* MainViewController */ = {
 			isa = PBXGroup;
 			children = (
+				DC1AA51324C64B4C0002EFA0 /* Models */,
+				DC1AA50C24C6488B0002EFA0 /* Views */,
 				DC1AA4FD24C621360002EFA0 /* MainViewController.swift */,
 				DC1AA4FF24C621400002EFA0 /* MainViewController.xib */,
 				DC1AA50124C6214C0002EFA0 /* MainViewModel.swift */,
@@ -257,6 +271,23 @@
 				DC1AA50A24C62E420002EFA0 /* ReposSearchResponse.swift */,
 			);
 			path = Responses;
+			sourceTree = "<group>";
+		};
+		DC1AA50C24C6488B0002EFA0 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DC1AA50F24C64ABF0002EFA0 /* MainViewCell.xib */,
+				DC1AA51124C64AEC0002EFA0 /* MainViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DC1AA51324C64B4C0002EFA0 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DC1AA51424C64B540002EFA0 /* MainViewRenderable.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		EA6C95BED1C04278735BE1BC /* Frameworks */ = {
@@ -328,6 +359,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				DC1AA4C424C617EA0002EFA0 /* LaunchScreen.storyboard in Resources */,
+				DC1AA51024C64ABF0002EFA0 /* MainViewCell.xib in Resources */,
 				DC1AA50024C621400002EFA0 /* MainViewController.xib in Resources */,
 				DC1AA4C124C617EA0002EFA0 /* Assets.xcassets in Resources */,
 			);
@@ -386,19 +418,23 @@
 				DC1AA4FE24C621360002EFA0 /* MainViewController.swift in Sources */,
 				DC1AA4EE24C61FEC0002EFA0 /* UIViewExtensionsNib.swift in Sources */,
 				DC1AA50624C62ADA0002EFA0 /* GeneralAPIService.swift in Sources */,
+				DC1AA51724C651210002EFA0 /* Localized.swift in Sources */,
 				DC1AA4D624C61EE00002EFA0 /* MainNavigationController.swift in Sources */,
 				DC1AA4E224C61F850002EFA0 /* BundleExtension.swift in Sources */,
 				DC1AA4D824C61EFC0002EFA0 /* CommonViewController.swift in Sources */,
 				DC1AA4F024C61FFC0002EFA0 /* MoyaExtensions.swift in Sources */,
 				DC1AA4E624C61FA40002EFA0 /* ReusableView.swift in Sources */,
 				DC1AA4BC24C617EA0002EFA0 /* ViewController.swift in Sources */,
+				DC1AA50E24C649250002EFA0 /* CGFloatExtension.swift in Sources */,
 				DC1AA4F224C6200F0002EFA0 /* LayerExtension.swift in Sources */,
 				DC1AA4E424C61F950002EFA0 /* CollectionExtension.swift in Sources */,
 				DC1AA50424C627610002EFA0 /* BaseTargetType.swift in Sources */,
 				DC1AA4B824C617EA0002EFA0 /* AppDelegate.swift in Sources */,
+				DC1AA51224C64AEC0002EFA0 /* MainViewCell.swift in Sources */,
 				DC1AA4DA24C61F0C0002EFA0 /* CommonModalNavigationController.swift in Sources */,
 				DC1AA4DC24C61F1E0002EFA0 /* ApplicationCoordinator.swift in Sources */,
 				DC1AA4F724C620450002EFA0 /* ApiResponseError.swift in Sources */,
+				DC1AA51524C64B540002EFA0 /* MainViewRenderable.swift in Sources */,
 				DC1AA4DE24C61F330002EFA0 /* MainCoordinatorProtocol.swift in Sources */,
 				DC1AA4E824C61FB30002EFA0 /* UIColorExtension.swift in Sources */,
 				DC1AA4FB24C620EE0002EFA0 /* UICollectionViewExtension.swift in Sources */,

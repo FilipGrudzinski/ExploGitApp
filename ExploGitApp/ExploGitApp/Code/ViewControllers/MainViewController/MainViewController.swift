@@ -9,6 +9,14 @@
 import UIKit
 
 final class MainViewController: CommonViewController {
+    private enum Constants {
+        static let collectionViewHeight: CGFloat = 120.0
+        static let spacing: CGFloat = 16.0
+        static let contentInset = UIEdgeInsets(top: 15.0, left: 10.0, bottom: 10.0, right: 10.0)
+    }
+    
+    @IBOutlet private  weak var collectionView: UICollectionView!
+    
     private var viewModel: MainViewModelProtocol
     
     init(with viewModel: MainViewModelProtocol) {
@@ -29,7 +37,65 @@ final class MainViewController: CommonViewController {
     }
     
     private func setupView() {
+        view.backgroundColor = .white
+        title = viewModel.title
+        setupCollectionView()
+    }
+    
+    private func setupCollectionView() {
+        collectionView.registerCellByNib(MainViewCell.self)
+        collectionView.dataSource = self
+        collectionView.delegate = self
+        collectionView.backgroundColor = .white
+        collectionView.contentInset = Constants.contentInset
+    }
+    
+    @IBAction func testButton(_ sender: Any) {
+        viewModel.switchStyle()
     }
 }
 
-extension MainViewController: MainViewModelDelegate { }
+extension MainViewController: UICollectionViewDelegateFlowLayout {
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
+        switch viewModel.layoutStyle {
+        case .list:
+           let width = (collectionView.frame.width - Constants.spacing - collectionView.contentInset.left - collectionView.contentInset.right)
+            return CGSize(width: width, height: Constants.collectionViewHeight)
+        case .gird:
+        let width = (collectionView.frame.width - Constants.spacing - collectionView.contentInset.left - collectionView.contentInset.right).half
+            return CGSize(width: width, height: Constants.collectionViewHeight)
+        }
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return Constants.spacing
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
+        return Constants.spacing
+    }
+}
+
+extension MainViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        viewModel.selectedItem(indexPath.row)
+    }
+}
+
+extension MainViewController: UICollectionViewDataSource {
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return viewModel.dataSourceCount
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell: MainViewCell = collectionView.dequeueReusableCell(indexPath: indexPath)
+        cell.update(viewModel.item(at: indexPath.row))
+        return cell
+    }
+}
+
+extension MainViewController: MainViewModelDelegate {
+    func reloadData() {
+        collectionView.reloadData()
+    }
+}
