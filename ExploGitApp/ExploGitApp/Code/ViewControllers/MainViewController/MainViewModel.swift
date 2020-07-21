@@ -24,7 +24,6 @@ protocol MainViewModelProtocol: class {
     var layoutStyle: MainViewLayoutStyle { get }
     
     func onViewDidLoad()
-    
     func openSearchView()
     func switchStyle()
     func selectedItem(_ row: Int)
@@ -67,7 +66,7 @@ final class MainViewModel {
                 print(response)
                 self.delegate.showIndicator(false)
                 self.parseResponse()
-        } . catch { error in
+        } .catch { error in
             self.errorHandler(error)
         }
     }

@@ -10,7 +10,8 @@ import KeychainSwift
 
 enum KeychainManager {
     enum KeychainKey: String {
-        case tokenId
+        case loginToken
+        case accessToken
     }
     
     private static let keychain = KeychainSwift()

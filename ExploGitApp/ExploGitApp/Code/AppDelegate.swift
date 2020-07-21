@@ -31,7 +31,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         if SessionHelper.processOAuthStep1Response(url: url) {
             coordinator?.start()
         }
-        
         return true
     }
+    
 }

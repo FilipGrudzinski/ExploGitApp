@@ -28,7 +28,13 @@ final class LoginViewController: CommonViewController {
         super.viewDidLoad()
         
         setupView()
-        viewModel.onViewDidLoad()
+    }
+    
+    
+    override func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        
+        viewModel.onViewDidAppear()
     }
     
     private func setupView() {
@@ -40,13 +46,12 @@ final class LoginViewController: CommonViewController {
     }
     
     @IBAction private func loginButtonTap(_ sender: Any) {
-        let authPath:String = "https://github.com/login/oauth/authorize?client_id=\(AuthorizationStrings.clientID)"
-        if let authURL: URL = URL(string: authPath)
-        {
-            UIApplication.shared.openURL(authURL)
-        }
+        UIApplication.shared.open(viewModel.authLoginUrl)
     }
 }
 
 extension LoginViewController: LoginViewModelDelegate {
+    func presentAlert(_ model: CommonAlertModel) {
+        AlertHelper.commonAlert(model: model, confirmHandler: nil, controller: self).show()
+    }
 }

@@ -13,6 +13,7 @@ import PromiseKit
 protocol APIWorkerProtocol {
     func fetchFeeds() -> Promise<FeedsResponse>
     func fetchReposSearch(_ query: String) -> Promise<ReposSearchResponse>
+    func getAccessToken(_ code: String) -> Promise<AccessTokenResponse>
 }
 
 final class APIWorker: APIWorkerProtocol {
@@ -23,7 +24,11 @@ final class APIWorker: APIWorkerProtocol {
     }
     
     func fetchReposSearch(_ query: String) -> Promise<ReposSearchResponse> {
-        return provider.request(.repos(query: query), type: ReposSearchResponse.self)
+        return provider.request(.repos(query), type: ReposSearchResponse.self)
+    }
+    
+    func getAccessToken(_ code: String) -> Promise<AccessTokenResponse> {
+        return provider.request(.getAccessToken(code), type: AccessTokenResponse.self)
     }
 }
 
