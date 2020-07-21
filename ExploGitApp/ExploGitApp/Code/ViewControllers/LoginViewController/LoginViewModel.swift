@@ -57,14 +57,6 @@ extension LoginViewModel: LoginViewModelProtocol {
         guard let code: String = KeychainManager.get(from: .loginToken), code != .empty else {
             return
         }
-        
         worker.getAccessToken(code)
-            .done { response in
-                SessionHelper.login(response.code)
-                print(response)
-        } .catch { error in
-            SessionHelper.logout()
-            self.errorHandler(error)
-        }
     }
 }

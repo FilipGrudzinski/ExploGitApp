@@ -10,6 +10,6 @@ import Foundation
 
 enum AuthorizationStrings {
     static let clientID = "307fa72bfadd586b227d"
-    static let clientSecret = "854f48136e54cf3ad28f3bb4ae90d4cc52b6e0d4"
-    static let authorizeURL = "https://github.com/login/oauth/authorize?client_id=\(clientID)"
+    static let clientSecret = "69f19c38a37c1f79a778d9675d26fb8af8b9503d"
+    static let authorizeURL = "https://github.com/login/oauth/authorize?client_id=\(clientID)&scope=repo&state=TEST_STATE"
 }
