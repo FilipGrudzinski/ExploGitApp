@@ -41,20 +41,14 @@ final class MainViewModel {
     }
     
     private let coordinator: MainCoordinatorProtocol
-    private let worker: APIWorkerProtocol = APIWorker()
+    private let worker: APIWorkerProtocol
     
-    init(_ coordinator: MainCoordinatorProtocol) {
+    init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
+        self.worker = worker
     }
     
     private func search(_ query: String) {
-        worker.fetchReposSearch(query)
-            .done { response in
-                print(response)
-        } .catch { error in
-            print(error)
-        }
-        
         worker.fetchFeeds()
         .done { response in
             print(response)

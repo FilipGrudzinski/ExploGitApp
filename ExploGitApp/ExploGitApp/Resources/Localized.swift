@@ -11,4 +11,7 @@ import Foundation
 enum Localized {
     static let mainViewTitle = "Git Explorer"
     static let searchViewTitle = "Search Repo"
+    static let searchViewPlaceholder = "Search query"
+    static let searchButtonTitle = "Search"
+    static let repoDetailsView = "Details"
 }

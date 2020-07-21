@@ -38,6 +38,9 @@ final class MainCoordinator: MainCoordinatorProtocol {
     }
     
     func openDetailsView() {
+        let viewModel = RepoDetailsViewModel(self)
+        let viewController = RepoDetailsViewController(with: viewModel)
         
+        navigationController.pushViewController(viewController, animated: true)
     }
 }

@@ -1,0 +1,59 @@
+PODS:
+  - Alamofire (4.7.3)
+  - KeychainSwift (19.0.0)
+  - Kingfisher (4.10.1)
+  - Moya/Core (13.0.1):
+    - Alamofire (~> 4.1)
+    - Result (~> 4.1)
+  - Moya/RxSwift (13.0.1):
+    - Moya/Core
+    - RxSwift (~> 4.0)
+  - OAuthSwift (2.1.0)
+  - PromiseKit (6.10.0):
+    - PromiseKit/CorePromise (= 6.10.0)
+    - PromiseKit/Foundation (= 6.10.0)
+    - PromiseKit/UIKit (= 6.10.0)
+  - PromiseKit/CorePromise (6.10.0)
+  - PromiseKit/Foundation (6.10.0):
+    - PromiseKit/CorePromise
+  - PromiseKit/UIKit (6.10.0):
+    - PromiseKit/CorePromise
+  - Result (4.1.0)
+  - RxSwift (4.5.0)
+  - SwiftGen (6.2.0)
+
+DEPENDENCIES:
+  - Alamofire (= 4.7.3)
+  - KeychainSwift
+  - Kingfisher
+  - Moya/RxSwift (= 13.0.1)
+  - OAuthSwift
+  - PromiseKit (= 6.10.0)
+  - SwiftGen
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - KeychainSwift
+    - Kingfisher
+    - Moya
+    - OAuthSwift
+    - PromiseKit
+    - Result
+    - RxSwift
+    - SwiftGen
+
+SPEC CHECKSUMS:
+  Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
+  KeychainSwift: a06190cf933ad46b1e0abc3d77d29c06331715c7
+  Kingfisher: c148cd7b47ebde9989f6bc7c27dcaa79d81279a0
+  Moya: f4a4b80ff2f8a4ffc208dfb31cd91636622fee6e
+  OAuthSwift: ab1675598273e04355e0282459c328e65c9ddacd
+  PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
+  Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
+  RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftGen: 77e88c8609381660cc1084c5ba8e1dc6065de692
+
+PODFILE CHECKSUM: b8a92beac0aa1df99d7cb763d2d99cd8f194df10
+
+COCOAPODS: 1.9.3
