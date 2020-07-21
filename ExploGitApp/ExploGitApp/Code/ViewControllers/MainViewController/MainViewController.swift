@@ -45,9 +45,10 @@ final class MainViewController: CommonViewController {
     
     private func addNavigationButtons() {
         let rightButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(layputButtonTap))
+        let rightFiltersButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(filtersButtonTap))
         let leftButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTap))
         
-        navigationItem.rightBarButtonItem  = rightButton
+        navigationItem.rightBarButtonItems  = [rightFiltersButton, rightButton]
         navigationItem.leftBarButtonItem  = leftButton
     }
     
@@ -57,6 +58,10 @@ final class MainViewController: CommonViewController {
     
     @objc private func searchButtonTap() {
         viewModel.openSearchView()
+    }
+    
+    @objc private func filtersButtonTap() {
+        viewModel.filtersButtonDidTap()
     }
     
     private func setupCollectionView() {

@@ -54,6 +54,9 @@
 		DC1AA53024C6E9A00002EFA0 /* RepoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA52F24C6E9A00002EFA0 /* RepoDetailsViewController.xib */; };
 		DC1AA53224C6E9AC0002EFA0 /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53124C6E9AC0002EFA0 /* RepoDetailsViewModel.swift */; };
 		DC1AA53424C705C20002EFA0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1AA53324C705C20002EFA0 /* WebKit.framework */; };
+		DC1AA53724C7107D0002EFA0 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53624C7107D0002EFA0 /* FiltersViewController.swift */; };
+		DC1AA53A24C710BC0002EFA0 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53924C710BC0002EFA0 /* FiltersViewModel.swift */; };
+		DC1AA53C24C710C50002EFA0 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA53B24C710C50002EFA0 /* FiltersViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -107,6 +110,9 @@
 		DC1AA52F24C6E9A00002EFA0 /* RepoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsViewController.xib; sourceTree = "<group>"; };
 		DC1AA53124C6E9AC0002EFA0 /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
 		DC1AA53324C705C20002EFA0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
+		DC1AA53624C7107D0002EFA0 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
+		DC1AA53924C710BC0002EFA0 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
+		DC1AA53B24C710C50002EFA0 /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -239,6 +245,7 @@
 		DC1AA4D224C61D8E0002EFA0 /* ViewControllers */ = {
 			isa = PBXGroup;
 			children = (
+				DC1AA53524C710690002EFA0 /* FiltersViewController */,
 				DC1AA52C24C6E93B0002EFA0 /* RepoDetailsViewController */,
 				DC1AA51D24C6DB230002EFA0 /* SearchViewControllers */,
 				DC1AA4FC24C6212D0002EFA0 /* MainViewController */,
@@ -355,6 +362,16 @@
 			path = RepoDetailsViewController;
 			sourceTree = "<group>";
 		};
+		DC1AA53524C710690002EFA0 /* FiltersViewController */ = {
+			isa = PBXGroup;
+			children = (
+				DC1AA53624C7107D0002EFA0 /* FiltersViewController.swift */,
+				DC1AA53924C710BC0002EFA0 /* FiltersViewModel.swift */,
+				DC1AA53B24C710C50002EFA0 /* FiltersViewController.xib */,
+			);
+			path = FiltersViewController;
+			sourceTree = "<group>";
+		};
 		EA6C95BED1C04278735BE1BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -427,6 +444,7 @@
 			files = (
 				DC1AA53024C6E9A00002EFA0 /* RepoDetailsViewController.xib in Resources */,
 				DC1AA4C424C617EA0002EFA0 /* LaunchScreen.storyboard in Resources */,
+				DC1AA53C24C710C50002EFA0 /* FiltersViewController.xib in Resources */,
 				DC1AA51024C64ABF0002EFA0 /* MainViewCell.xib in Resources */,
 				DC1AA50024C621400002EFA0 /* MainViewController.xib in Resources */,
 				DC1AA52124C6DBF40002EFA0 /* SearchViewController.xib in Resources */,
@@ -516,6 +534,7 @@
 				DC1AA4E624C61FA40002EFA0 /* ReusableView.swift in Sources */,
 				DC1AA52924C6E4250002EFA0 /* SearchViewCell.swift in Sources */,
 				DC1AA50E24C649250002EFA0 /* CGFloatExtension.swift in Sources */,
+				DC1AA53A24C710BC0002EFA0 /* FiltersViewModel.swift in Sources */,
 				DC1AA4F224C6200F0002EFA0 /* LayerExtension.swift in Sources */,
 				DC1AA53224C6E9AC0002EFA0 /* RepoDetailsViewModel.swift in Sources */,
 				DC1AA4E424C61F950002EFA0 /* CollectionExtension.swift in Sources */,
@@ -533,6 +552,7 @@
 				DC1AA4FB24C620EE0002EFA0 /* UICollectionViewExtension.swift in Sources */,
 				DC1AA52E24C6E99A0002EFA0 /* RepoDetailsViewController.swift in Sources */,
 				DC1AA50824C62D810002EFA0 /* APIWorker.swift in Sources */,
+				DC1AA53724C7107D0002EFA0 /* FiltersViewController.swift in Sources */,
 				DC1AA50B24C62E420002EFA0 /* ReposSearchResponse.swift in Sources */,
 				DC1AA4F924C6206D0002EFA0 /* ActivityIndicator.swift in Sources */,
 				DC1AA4EA24C61FC30002EFA0 /* UIFontExtension.swift in Sources */,

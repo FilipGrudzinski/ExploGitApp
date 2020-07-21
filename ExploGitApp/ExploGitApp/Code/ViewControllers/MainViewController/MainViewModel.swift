@@ -25,6 +25,7 @@ protocol MainViewModelProtocol: class {
     func switchStyle()
     func selectedItem(_ row: Int)
     func item(at row: Int) -> MainViewRenderable
+    func filtersButtonDidTap()
 }
 
 protocol MainViewModelDelegate: class {
@@ -50,8 +51,8 @@ final class MainViewModel {
     
     private func search(_ query: String) {
         worker.fetchFeeds()
-        .done { response in
-            print(response)
+            .done { response in
+                print(response)
         } . catch { error in
             print(error)
         }
@@ -82,5 +83,9 @@ extension MainViewModel: MainViewModelProtocol {
     
     func openSearchView() {
         coordinator.openSearchView()
+    }
+    
+    func filtersButtonDidTap() {
+        coordinator.openSearchFilter()
     }
 }

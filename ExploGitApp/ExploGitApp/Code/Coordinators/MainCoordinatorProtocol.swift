@@ -11,6 +11,7 @@ import UIKit
 protocol MainCoordinatorProtocol: CoordinatorProtocol {
     func openSearchView()
     func openDetailsView(_ url: URL, title: String)
+    func openSearchFilter()
     func dismiss()
 }
 
@@ -45,6 +46,13 @@ final class MainCoordinator: MainCoordinatorProtocol {
         
         modalNavigationController.modalPresentationStyle = .overFullScreen
         navigationController.present(modalNavigationController, animated: true)
+    }
+    
+    func openSearchFilter() {
+        let viewModel = FiltersViewModel(self)
+        let viewController = FiltersViewController(with: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
     }
     
     func dismiss() {
