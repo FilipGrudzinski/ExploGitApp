@@ -17,6 +17,8 @@ protocol MainViewModelProtocol: class {
     var delegate: MainViewModelDelegate! { get set }
     var title: String { get }
     var emptyTitle: String { get }
+    var listStyleButtonTitle: String { get }
+    var filterButtonTitle: String { get }
     var dataSourceCount: Int { get }
     var layoutStyle: MainViewLayoutStyle { get }
     
@@ -32,6 +34,7 @@ protocol MainViewModelProtocol: class {
 protocol MainViewModelDelegate: class {
     func showIndicator(_ state: Bool)
     func showEmptyView(_ state: Bool)
+    func updateNavigationButtons()
     func reloadData()
 }
 
@@ -41,6 +44,7 @@ final class MainViewModel {
     private var listStyle = true {
         didSet {
             delegate.reloadData()
+            delegate.updateNavigationButtons()
         }
     }
     
@@ -86,6 +90,8 @@ final class MainViewModel {
 extension MainViewModel: MainViewModelProtocol {
     var title: String { Localized.mainViewTitle }
     var emptyTitle: String { Localized.mainViewEmptyTitle }
+    var listStyleButtonTitle: String { listStyle ? Localized.mainViewGridButtonTitle : Localized.listViewGridButtonTitle }
+    var filterButtonTitle: String { Localized.mainViewFilterButtonTitle }
     var dataSourceCount: Int { dataSource.count }
     var layoutStyle: MainViewLayoutStyle { listStyle ? .list : .gird }
     

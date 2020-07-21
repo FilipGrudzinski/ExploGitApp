@@ -55,8 +55,8 @@ final class MainViewController: CommonViewController {
     
     
     private func addNavigationButtons() {
-        let rightButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(layputButtonTap))
-        let rightFiltersButton = UIBarButtonItem(barButtonSystemItem: .edit, target: self, action: #selector(filtersButtonTap))
+        let rightButton = UIBarButtonItem(title: viewModel.listStyleButtonTitle, style: .plain, target: self, action: #selector(layputButtonTap))
+        let rightFiltersButton = UIBarButtonItem(title: viewModel.filterButtonTitle, style: .plain, target: self, action: #selector(searchButtonTap))
         let leftButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTap))
         
         navigationItem.rightBarButtonItems  = [rightFiltersButton, rightButton]
@@ -134,5 +134,9 @@ extension MainViewController: MainViewModelDelegate {
     
     func showEmptyView(_ state: Bool) {
         emptyView.isHidden = state
+    }
+    
+    func updateNavigationButtons() {
+        addNavigationButtons()
     }
 }
