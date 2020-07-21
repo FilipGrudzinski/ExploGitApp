@@ -23,7 +23,7 @@ protocol MainViewModelProtocol: class {
     var dataSourceCount: Int { get }
     var layoutStyle: MainViewLayoutStyle { get }
     
-    func onViewDidLoad()
+    func onViewWillAppear()
     func openSearchView()
     func switchStyle()
     func selectedItem(_ row: Int)
@@ -60,16 +60,22 @@ final class MainViewModel {
     private let worker: APIWorkerProtocol
     private var itemsDataSource: [MainViewRenderable] = []
     private var dataSource: [RepositoryResponseModel] = []
+    private var cache: MainViewCacheProtocol = MainViewCache()
     
     init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
         self.worker = worker
     }
     
+    deinit {
+        cache.clearCache()
+    }
+    
     private func loadUserRepositories() {
         worker.fetchRepositories()
             .done { response in
                 self.dataSource = response
+                self.cache.setRepositories(RepositoryCacheModel(data: response))
                 self.delegate.showIndicator(false)
                 self.parseResponse()
         } .catch { error in
@@ -116,9 +122,16 @@ extension MainViewModel: MainViewModelProtocol {
     var dataSourceCount: Int { itemsDataSource.count }
     var layoutStyle: MainViewLayoutStyle { listStyle ? .list : .gird }
     
-    func onViewDidLoad() {
+    func onViewWillAppear() {
         delegate.hideEmptyView(itemsDataSource.isNotEmpty)
-        loadUserRepositories()
+        
+        guard let cacheData = cache.getRepositories(), cacheData.data.isNotEmpty else {
+            loadUserRepositories()
+            return
+        }
+        
+        dataSource = cacheData.data
+        parseResponse()
     }
     
     func switchStyle() {
