@@ -8,6 +8,10 @@
 
 import Foundation
 
+protocol FiltersViewModelFilterDelegate {
+    func returnFilter(_ filter: String)
+}
+
 protocol FiltersViewModelProtocol: class {
     var delegate: FiltersViewModelDelegate! { get set }
     var title: String { get }

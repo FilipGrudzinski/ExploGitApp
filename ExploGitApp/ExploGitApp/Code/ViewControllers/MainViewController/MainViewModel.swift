@@ -50,6 +50,12 @@ final class MainViewModel {
         }
     }
     
+    private var filters = false {
+        didSet {
+            delegate.updateNavigationButtons()
+        }
+    }
+    
     private let coordinator: MainCoordinatorProtocol
     private let worker: APIWorkerProtocol
     private var itemsDataSource: [MainViewRenderable] = []
@@ -106,8 +112,8 @@ extension MainViewModel: MainViewModelProtocol {
     var logoutButotnTitle: String { Localized.mainViewLogoutButtonTitle }
     var emptyTitle: String { Localized.mainViewEmptyTitle }
     var listStyleButtonTitle: String { listStyle ? Localized.mainViewGridButtonTitle : Localized.mainViewListButtonTitle }
-    var filterButtonTitle: String { Localized.mainViewFilterButtonTitle }
-    var dataSourceCount: Int { dataSource.count }
+    var filterButtonTitle: String { filters ? Localized.mainViewFilterClearButtonTitle : Localized.mainViewFilterButtonTitle }
+    var dataSourceCount: Int { itemsDataSource.count }
     var layoutStyle: MainViewLayoutStyle { listStyle ? .list : .gird }
     
     func onViewDidLoad() {
@@ -135,10 +141,29 @@ extension MainViewModel: MainViewModelProtocol {
     }
     
     func filtersButtonDidTap() {
-        coordinator.openSearchFilter()
+        if filters {
+            filters.toggle()
+            parseResponse()
+        } else {
+            let items = dataSource.map { $0.language }.removingDuplicates()
+            
+            coordinator.openSearchFilter(items, delegate: self)
+        }
     }
     
     func logout() {
         coordinator.logout()
+    }
+}
+
+extension MainViewModel: FiltersViewModelFilterDelegate {
+    func returnFilter(_ filter: String) {
+        let tempData = itemsDataSource.filter { $0.language == filter }
+        
+        itemsDataSource.removeAll()
+        itemsDataSource = tempData
+        filters.toggle()
+        delegate.hideEmptyView(itemsDataSource.isNotEmpty)
+        delegate.reloadData()
     }
 }

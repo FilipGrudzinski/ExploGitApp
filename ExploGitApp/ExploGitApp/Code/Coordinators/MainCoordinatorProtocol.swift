@@ -13,7 +13,7 @@ protocol MainCoordinatorProtocol: CoordinatorProtocol {
     func openMainView()
     func openSearchView()
     func openDetailsView(_ url: URL, title: String)
-    func openSearchFilter()
+    func openSearchFilter<T: FiltersViewModelFilterDelegate>(_ dataSource: [String], delegate: T)
     func dismiss()
     func logout()
 }
@@ -62,9 +62,14 @@ final class MainCoordinator: MainCoordinatorProtocol {
         navigationController.present(modalNavigationController, animated: true)
     }
     
-    func openSearchFilter() {
-        let viewModel = FiltersViewModel(self)
+    func openSearchFilter<T: FiltersViewModelFilterDelegate>(_ dataSource: [String], delegate: T) {
+        let viewModel = FiltersViewModel(self, dataSource: dataSource)
         let viewController = FiltersViewController(with: viewModel)
+        
+        viewModel.selectedItem { [weak self] filter in
+            self?.navigationController.popViewController(animated: true)
+            delegate.returnFilter(filter)
+        }
         
         navigationController.pushViewController(viewController, animated: true)
     }

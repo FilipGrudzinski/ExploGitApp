@@ -45,7 +45,7 @@ final class FiltersViewController: CommonViewController {
         tableView.dataSource = self
         tableView.delegate = self
         tableView.allowsSelectionDuringEditing = false
-        tableView.separatorStyle = .none
+        tableView.separatorStyle = .singleLine
         tableView.backgroundColor = .white
         tableView.estimatedRowHeight = Constants.cellHeight
     }
@@ -65,7 +65,7 @@ extension FiltersViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell: FiltersCell = tableView.dequeueReusableCell(indexPath: indexPath)
-        cell.update()
+        cell.update(viewModel.item(at: indexPath.row))
         return cell
     }
 }

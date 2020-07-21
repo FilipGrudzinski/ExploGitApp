@@ -22,4 +22,8 @@ final class FiltersCell: UITableViewCell {
         titleLabel.textColor = .appBlue
         titleLabel.numberOfLines = .zero
     }
+    
+    func update(_ title: String) {
+        titleLabel.text = title
+    }
 }

@@ -73,6 +73,7 @@
 		DC1AA55F24C78AD60002EFA0 /* OwnerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA55E24C78AD60002EFA0 /* OwnerModel.swift */; };
 		DCDF173724C7943400BAE88D /* FiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDF173624C7943400BAE88D /* FiltersCell.swift */; };
 		DCDF173924C7943F00BAE88D /* FiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDF173824C7943E00BAE88D /* FiltersCell.xib */; };
+		DCDF173C24C79A6300BAE88D /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDF173B24C79A6300BAE88D /* ArrayExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -145,6 +146,7 @@
 		DC1AA55E24C78AD60002EFA0 /* OwnerModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OwnerModel.swift; sourceTree = "<group>"; };
 		DCDF173624C7943400BAE88D /* FiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCell.swift; sourceTree = "<group>"; };
 		DCDF173824C7943E00BAE88D /* FiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersCell.xib; sourceTree = "<group>"; };
+		DCDF173B24C79A6300BAE88D /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -248,6 +250,7 @@
 				DC1AA4FA24C620EE0002EFA0 /* UICollectionViewExtension.swift */,
 				DC1AA50D24C649250002EFA0 /* CGFloatExtension.swift */,
 				DC1AA54124C713C20002EFA0 /* UIViewExtensions.swift */,
+				DCDF173B24C79A6300BAE88D /* ArrayExtension.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -632,6 +635,7 @@
 				DC1AA4DC24C61F1E0002EFA0 /* ApplicationCoordinator.swift in Sources */,
 				DC1AA4F724C620450002EFA0 /* ApiResponseError.swift in Sources */,
 				DC1AA51524C64B540002EFA0 /* MainViewRenderable.swift in Sources */,
+				DCDF173C24C79A6300BAE88D /* ArrayExtension.swift in Sources */,
 				DC1AA4DE24C61F330002EFA0 /* MainCoordinatorProtocol.swift in Sources */,
 				DC1AA55424C737200002EFA0 /* SessionHelper.swift in Sources */,
 				DC1AA4E824C61FB30002EFA0 /* UIColorExtension.swift in Sources */,

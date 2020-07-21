@@ -27,4 +27,5 @@ enum Localized {
     static let commonAlertTitle = "Błąd"
     static let commonAlertDescription = "Ups.. coś poszło nie tak"
     static let commonAlertButtonTitle = "Ok"
+    static let mainViewFilterClearButtonTitle = "Clear"
 }
