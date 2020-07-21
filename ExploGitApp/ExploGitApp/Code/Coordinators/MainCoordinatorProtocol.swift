@@ -9,10 +9,13 @@
 import UIKit
 
 protocol MainCoordinatorProtocol: CoordinatorProtocol {
+    func openLoginView()
+    func openMainView()
     func openSearchView()
     func openDetailsView(_ url: URL, title: String)
     func openSearchFilter()
     func dismiss()
+    func logout()
 }
 
 final class MainCoordinator: MainCoordinatorProtocol {
@@ -24,11 +27,22 @@ final class MainCoordinator: MainCoordinatorProtocol {
     }
     
     func start() {
+        SessionHelper.userIsLoggedIn ? openMainView() : openLoginView()
+    }
+    
+    func openMainView() {
         let viewModel = MainViewModel(self)
         let viewController = MainViewController(with: viewModel)
         navigationController.pushViewController(viewController, animated: true)
         
         parentCoordinator.showRootViewController(rootViewController: navigationController)
+    }
+    
+    func openLoginView() {
+        let viewModel = LoginViewModel(self)
+        let viewController = LoginViewController(with: viewModel)
+        
+        parentCoordinator.showRootViewController(rootViewController: viewController)
     }
     
     func openSearchView() {
@@ -57,5 +71,10 @@ final class MainCoordinator: MainCoordinatorProtocol {
     
     func dismiss() {
         navigationController.dismiss(animated: true)
+    }
+    
+    func logout() {
+        SessionHelper.logout()
+        start()
     }
 }

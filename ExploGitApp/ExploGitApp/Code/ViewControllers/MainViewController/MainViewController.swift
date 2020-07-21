@@ -53,26 +53,30 @@ final class MainViewController: CommonViewController {
         emptyView.isHidden = true
     }
     
-    
     private func addNavigationButtons() {
         let rightButton = UIBarButtonItem(title: viewModel.listStyleButtonTitle, style: .plain, target: self, action: #selector(layputButtonTap))
         let rightFiltersButton = UIBarButtonItem(title: viewModel.filterButtonTitle, style: .plain, target: self, action: #selector(searchButtonTap))
-        let leftButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTap))
+        let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTap))
+        let logoutButton = UIBarButtonItem(title: viewModel.logoutButotnTitle, style: .plain, target: self, action: #selector(logOutButtonTap))
         
         navigationItem.rightBarButtonItems  = [rightFiltersButton, rightButton]
-        navigationItem.leftBarButtonItem  = leftButton
+        navigationItem.leftBarButtonItems  = [logoutButton, searchButton]
     }
     
     @objc private func layputButtonTap() {
         viewModel.switchStyle()
     }
     
+    @objc private func filtersButtonTap() {
+        viewModel.filtersButtonDidTap()
+    }
+    
     @objc private func searchButtonTap() {
         viewModel.openSearchView()
     }
     
-    @objc private func filtersButtonTap() {
-        viewModel.filtersButtonDidTap()
+    @objc private func logOutButtonTap() {
+        viewModel.logout()
     }
     
     private func setupCollectionView() {

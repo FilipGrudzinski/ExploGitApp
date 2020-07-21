@@ -16,6 +16,7 @@ enum MainViewLayoutStyle {
 protocol MainViewModelProtocol: class {
     var delegate: MainViewModelDelegate! { get set }
     var title: String { get }
+    var logoutButotnTitle: String { get }
     var emptyTitle: String { get }
     var listStyleButtonTitle: String { get }
     var filterButtonTitle: String { get }
@@ -29,6 +30,7 @@ protocol MainViewModelProtocol: class {
     func selectedItem(_ row: Int)
     func item(at row: Int) -> MainViewRenderable
     func filtersButtonDidTap()
+    func logout()
 }
 
 protocol MainViewModelDelegate: class {
@@ -102,8 +104,9 @@ final class MainViewModel {
 
 extension MainViewModel: MainViewModelProtocol {
     var title: String { Localized.mainViewTitle }
+    var logoutButotnTitle: String { Localized.mainViewLogoutButtonTitle }
     var emptyTitle: String { Localized.mainViewEmptyTitle }
-    var listStyleButtonTitle: String { listStyle ? Localized.mainViewGridButtonTitle : Localized.listViewGridButtonTitle }
+    var listStyleButtonTitle: String { listStyle ? Localized.mainViewGridButtonTitle : Localized.mainViewListButtonTitle }
     var filterButtonTitle: String { Localized.mainViewFilterButtonTitle }
     var dataSourceCount: Int { dataSource.count }
     var layoutStyle: MainViewLayoutStyle { listStyle ? .list : .gird }
@@ -131,5 +134,9 @@ extension MainViewModel: MainViewModelProtocol {
     
     func filtersButtonDidTap() {
         coordinator.openSearchFilter()
+    }
+    
+    func logout() {
+        coordinator.logout()
     }
 }

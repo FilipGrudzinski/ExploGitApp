@@ -26,4 +26,12 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return true
     }
+    
+    func application(_ application: UIApplication, handleOpen url: URL) -> Bool {
+        if SessionHelper.processOAuthStep1Response(url: url) {
+            coordinator?.start()
+        }
+        
+        return true
+    }
 }

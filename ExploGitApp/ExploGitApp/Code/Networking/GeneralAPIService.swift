@@ -10,9 +10,9 @@ import Foundation
 import Moya
 
 enum GeneralAPIService {
+    case authorize
     case feed
     case repos(query: String)
-    case details
 }
 
 extension GeneralAPIService: TargetType {
@@ -22,25 +22,28 @@ extension GeneralAPIService: TargetType {
             return "/feeds"
         case .repos:
             return "/search/repositories"
-        case .details:
-            return ""
+        case .authorize:
+            return "/login/oauth/authorize"
         }
     }
     
     var method: Moya.Method {
         switch self {
-        case .feed:
-            return .get
-        case .repos:
-            return .get
-        case .details:
+        case .feed, .repos, .authorize:
             return .get
         }
     }
     
+    var headers: [String: String]? {
+        if let token: String = KeychainManager.get(from: .tokenId) {
+            return ["Authorization": "token \(token)"]
+        }
+        return nil
+    }
+    
     var task: Task {
         switch self {
-        case .feed, .details, .repos:
+        case .feed, .repos, .authorize:
             if let parameters = parameters {
                 return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
             }
