@@ -11,8 +11,11 @@ import Foundation
 protocol FiltersViewModelProtocol: class {
     var delegate: FiltersViewModelDelegate! { get set }
     var title: String { get }
+    var dataSourceCount: Int { get }
     
-    func onViewDidLoad()
+    func item(at row: Int) -> String
+    func didTapCell(at row: Int)
+    func selectedItem(_ closure: @escaping (String) -> ())
 }
 
 protocol FiltersViewModelDelegate: class {
@@ -23,14 +26,29 @@ final class FiltersViewModel {
     
     private let coordinator: MainCoordinatorProtocol
     
-    init(_ coordinator: MainCoordinatorProtocol) {
+    private var selectedItemClosure: ((String)-> ())?
+    
+    private var dataSource: [String] = []
+    
+    init(_ coordinator: MainCoordinatorProtocol, dataSource: [String]) {
         self.coordinator = coordinator
+        self.dataSource = dataSource
     }
 }
 
 extension FiltersViewModel: FiltersViewModelProtocol {
     var title: String { Localized.filterViewTitle }
+    var dataSourceCount: Int { dataSource.count }
     
-    func onViewDidLoad() {
+    func item(at row: Int) -> String {
+        dataSource[row]
+    }
+    
+    func didTapCell(at row: Int) {
+        selectedItemClosure?(dataSource[row])
+    }
+    
+    func selectedItem(_ closure: @escaping (String) -> ()) {
+        selectedItemClosure = closure
     }
 }

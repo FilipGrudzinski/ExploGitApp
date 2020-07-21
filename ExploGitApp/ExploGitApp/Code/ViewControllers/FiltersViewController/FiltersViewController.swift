@@ -9,6 +9,12 @@
 import UIKit
 
 final class FiltersViewController: CommonViewController {
+    private enum Constants {
+        static let cellHeight: CGFloat = 62.0
+    }
+    
+    @IBOutlet private  weak var tableView: UITableView!
+    
     private var viewModel: FiltersViewModelProtocol
     
     init(with viewModel: FiltersViewModelProtocol) {
@@ -25,12 +31,42 @@ final class FiltersViewController: CommonViewController {
         super.viewDidLoad()
         
         setupView()
-        viewModel.onViewDidLoad()
     }
     
     private func setupView() {
         view.backgroundColor = .white
         title = viewModel.title
+        
+        setupTableView()
+    }
+    
+    private func setupTableView() {
+        tableView.registerCellByNib(FiltersCell.self)
+        tableView.dataSource = self
+        tableView.delegate = self
+        tableView.allowsSelectionDuringEditing = false
+        tableView.separatorStyle = .none
+        tableView.backgroundColor = .white
+        tableView.estimatedRowHeight = Constants.cellHeight
+    }
+}
+
+extension FiltersViewController: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        viewModel.didTapCell(at: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
+    }
+}
+
+extension FiltersViewController: UITableViewDataSource {
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return viewModel.dataSourceCount
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell: FiltersCell = tableView.dequeueReusableCell(indexPath: indexPath)
+        cell.update()
+        return cell
     }
 }
 

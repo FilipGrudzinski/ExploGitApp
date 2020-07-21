@@ -40,7 +40,7 @@ final class LoginViewModel {
     
     private func errorHandler(_ error: Error) {
         guard let _ = error as? ApiResponseError else {
-            fatalError()
+            return
         }
         
         let model = CommonAlertModel(title: Localized.commonAlertTitle, description: Localized.commonAlertDescription, buttonTitle: Localized.commonAlertButtonTitle)

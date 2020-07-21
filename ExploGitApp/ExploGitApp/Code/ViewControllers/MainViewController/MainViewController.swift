@@ -55,7 +55,7 @@ final class MainViewController: CommonViewController {
     
     private func addNavigationButtons() {
         let rightButton = UIBarButtonItem(title: viewModel.listStyleButtonTitle, style: .plain, target: self, action: #selector(layputButtonTap))
-        let rightFiltersButton = UIBarButtonItem(title: viewModel.filterButtonTitle, style: .plain, target: self, action: #selector(searchButtonTap))
+        let rightFiltersButton = UIBarButtonItem(title: viewModel.filterButtonTitle, style: .plain, target: self, action: #selector(filtersButtonTap))
         let searchButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTap))
         let logoutButton = UIBarButtonItem(title: viewModel.logoutButotnTitle, style: .plain, target: self, action: #selector(logOutButtonTap))
         

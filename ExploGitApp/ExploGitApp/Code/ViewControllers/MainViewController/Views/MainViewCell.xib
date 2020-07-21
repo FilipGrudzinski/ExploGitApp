@@ -18,7 +18,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Wf1-oQ-Gsf">
-                        <rect key="frame" x="49.5" y="17" width="40" height="40"/>
+                        <rect key="frame" x="49.5" y="5" width="40" height="40"/>
                         <constraints>
                             <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="40" id="Gps-EK-0f5"/>
                             <constraint firstAttribute="width" constant="40" id="O2f-jj-Lyh"/>
@@ -27,7 +27,13 @@
                         </constraints>
                     </imageView>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3vF-bu-eXc">
-                        <rect key="frame" x="0.0" y="65" width="139" height="23"/>
+                        <rect key="frame" x="0.0" y="50" width="139" height="20.5"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lgD-RO-jpg">
+                        <rect key="frame" x="15" y="80.5" width="109" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -35,17 +41,21 @@
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="3vF-bu-eXc" firstAttribute="top" secondItem="Wf1-oQ-Gsf" secondAttribute="bottom" constant="8" id="19m-DI-xHu"/>
-                <constraint firstItem="Wf1-oQ-Gsf" firstAttribute="top" secondItem="P0n-Da-AVY" secondAttribute="top" constant="17" id="9Bm-N2-hSM"/>
+                <constraint firstItem="3vF-bu-eXc" firstAttribute="top" secondItem="Wf1-oQ-Gsf" secondAttribute="bottom" constant="5" id="19m-DI-xHu"/>
+                <constraint firstAttribute="trailing" secondItem="lgD-RO-jpg" secondAttribute="trailing" constant="15" id="744-GN-OnG"/>
+                <constraint firstItem="Wf1-oQ-Gsf" firstAttribute="top" secondItem="P0n-Da-AVY" secondAttribute="top" constant="5" id="9Bm-N2-hSM"/>
                 <constraint firstItem="3vF-bu-eXc" firstAttribute="leading" secondItem="P0n-Da-AVY" secondAttribute="leading" id="LqF-69-fMu"/>
                 <constraint firstAttribute="trailing" secondItem="3vF-bu-eXc" secondAttribute="trailing" id="SOU-TL-cRw"/>
-                <constraint firstAttribute="bottom" relation="lessThanOrEqual" secondItem="3vF-bu-eXc" secondAttribute="bottom" constant="16" id="fuO-Hc-D3W"/>
+                <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="lgD-RO-jpg" secondAttribute="bottom" id="dpy-QV-jhV"/>
                 <constraint firstItem="Wf1-oQ-Gsf" firstAttribute="centerX" secondItem="P0n-Da-AVY" secondAttribute="centerX" id="hbj-1P-5dw"/>
+                <constraint firstItem="lgD-RO-jpg" firstAttribute="top" secondItem="3vF-bu-eXc" secondAttribute="bottom" constant="10" id="ng0-fo-6Pi"/>
+                <constraint firstItem="lgD-RO-jpg" firstAttribute="leading" secondItem="P0n-Da-AVY" secondAttribute="leading" constant="15" id="piA-0J-yn9"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="m6l-d8-7cd"/>
             <size key="customSize" width="156" height="120"/>
             <connections>
                 <outlet property="iconImageView" destination="Wf1-oQ-Gsf" id="3Rn-oQ-M5y"/>
+                <outlet property="languageLabel" destination="lgD-RO-jpg" id="lFO-Pk-Y1e"/>
                 <outlet property="titleLabel" destination="3vF-bu-eXc" id="TJz-hJ-Ecx"/>
             </connections>
             <point key="canvasLocation" x="35.507246376811594" y="241.74107142857142"/>

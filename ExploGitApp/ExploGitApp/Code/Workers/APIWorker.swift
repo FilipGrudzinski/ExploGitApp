@@ -11,16 +11,16 @@ import Alamofire
 import PromiseKit
 
 protocol APIWorkerProtocol {
-    func fetchFeeds() -> Promise<FeedsResponse>
+    func fetchRepositories() -> Promise<[RepositoryResponseModel]>
     func fetchReposSearch(_ query: String) -> Promise<ReposSearchResponse>
     func getAccessToken(_ code: String) -> Bool
 }
 
-final class APIWorker: APIWorkerProtocol {
+final class APIWorker: APIWorkerProtocol {    
     let provider = MoyaProvider<GeneralAPIService>(plugins: [NetworkLoggerPlugin(verbose: true)])
     
-    func fetchFeeds() -> Promise<FeedsResponse> {
-        return provider.request(.feed, type: FeedsResponse.self)
+    func fetchRepositories() -> Promise<[RepositoryResponseModel]> {
+        return provider.request(.userRepositories, type: [RepositoryResponseModel].self)
     }
     
     func fetchReposSearch(_ query: String) -> Promise<ReposSearchResponse> {

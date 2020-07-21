@@ -10,15 +10,15 @@ import Foundation
 import Moya
 
 enum GeneralAPIService {
-    case feed
+    case userRepositories
     case repos(String)
 }
 
 extension GeneralAPIService: TargetType {
     var path: String {
         switch self {
-        case .feed:
-            return "/search"
+        case .userRepositories:
+            return "/user/repos"
         case .repos:
             return "/search/repositories"
         }
@@ -26,7 +26,7 @@ extension GeneralAPIService: TargetType {
     
     var method: Moya.Method {
         switch self {
-        case .feed, .repos:
+        case .userRepositories, .repos:
             return .get
         }
     }
@@ -40,7 +40,7 @@ extension GeneralAPIService: TargetType {
     
     var task: Task {
         switch self {
-        case .feed, .repos:
+        case .userRepositories, .repos:
             if let parameters = parameters {
                 return .requestParameters(parameters: parameters, encoding: URLEncoding.default)
             }
@@ -53,8 +53,7 @@ extension GeneralAPIService: TargetType {
         switch self {
         case let .repos(query):
             params["q"] = query
-        case .feed:
-            params["q"] = "Feeds"
+        default: ()
         }
         return params
     }

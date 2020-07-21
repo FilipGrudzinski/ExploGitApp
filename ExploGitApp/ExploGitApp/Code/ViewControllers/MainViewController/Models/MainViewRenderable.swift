@@ -9,6 +9,8 @@
 import UIKit
 
 struct MainViewRenderable {
-    let icon: UIImage
+    let id: Int
     let title: String
+    let language: String
+    let imageURL: String?
 }

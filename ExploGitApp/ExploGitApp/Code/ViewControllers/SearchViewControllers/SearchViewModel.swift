@@ -36,7 +36,7 @@ final class SearchViewModel {
     private let worker: APIWorkerProtocol
     
     private var itemsDataSource: [SearchViewCellItemModel] = []
-    private var dataSource: [ReposSearchResponse.Repository] = []
+    private var dataSource: [RepositoryResponseModel] = []
     
     init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
@@ -74,7 +74,7 @@ final class SearchViewModel {
     private func errorHandler(_ error: Error) {
         delegate.showIndicator(false)
         guard let _ = error as? ApiResponseError else {
-            fatalError()
+            return
         }
         
         delegate.hideEmptyView(true)

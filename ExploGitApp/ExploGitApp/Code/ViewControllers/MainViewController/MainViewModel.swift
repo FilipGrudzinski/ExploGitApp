@@ -53,17 +53,17 @@ final class MainViewModel {
     private let coordinator: MainCoordinatorProtocol
     private let worker: APIWorkerProtocol
     private var itemsDataSource: [MainViewRenderable] = []
-    private var dataSource: [String] = []
+    private var dataSource: [RepositoryResponseModel] = []
     
     init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
         self.worker = worker
     }
     
-    private func loadFeeds() {
-        worker.fetchFeeds()
+    private func loadUserRepositories() {
+        worker.fetchRepositories()
             .done { response in
-                print(response)
+                self.dataSource = response
                 self.delegate.showIndicator(false)
                 self.parseResponse()
         } .catch { error in
@@ -75,7 +75,7 @@ final class MainViewModel {
         itemsDataSource.removeAll()
         
         dataSource.forEach { item in
-
+            itemsDataSource.append(MainViewRenderable(id: item.id, title: item.name, language: item.language, imageURL: item.owner?.avatarUrl))
         }
         
         delegate.hideEmptyView(itemsDataSource.isNotEmpty)
@@ -91,7 +91,7 @@ final class MainViewModel {
     private func errorHandler(_ error: Error) {
         delegate.showIndicator(false)
         guard let _ = error as? ApiResponseError else {
-            fatalError()
+            return
         }
         
         delegate.hideEmptyView(true)
@@ -112,7 +112,7 @@ extension MainViewModel: MainViewModelProtocol {
     
     func onViewDidLoad() {
         delegate.hideEmptyView(itemsDataSource.isNotEmpty)
-        loadFeeds()
+        loadUserRepositories()
     }
     
     func switchStyle() {
@@ -120,11 +120,14 @@ extension MainViewModel: MainViewModelProtocol {
     }
     
     func selectedItem(_ row: Int) {
-        print("Row\(row)")
+        guard let index = dataSource.firstIndex(where: { $0.id == itemsDataSource[row].id }), let url = URL(string: dataSource[index].htmlUrl ?? .empty), let title = dataSource[index].fullName else {
+            return
+        }
+        coordinator.openDetailsView(url, title: title)
     }
     
     func item(at row: Int) -> MainViewRenderable {
-        return MainViewRenderable(icon: UIImage(), title: "Row\(row)")
+        return itemsDataSource[row]
     }
     
     func openSearchView() {
