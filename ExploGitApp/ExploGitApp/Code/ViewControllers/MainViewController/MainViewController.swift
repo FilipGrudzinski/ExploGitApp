@@ -15,9 +15,11 @@ final class MainViewController: CommonViewController {
         static let contentInset = UIEdgeInsets(top: 15.0, left: 10.0, bottom: 10.0, right: 10.0)
     }
     
-    @IBOutlet private  weak var collectionView: UICollectionView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var emptyView: UIView!
     
     private var viewModel: MainViewModelProtocol
+    private let emptyKit = EmptyKitView.fromNib()
     
     init(with viewModel: MainViewModelProtocol) {
         self.viewModel = viewModel
@@ -41,7 +43,16 @@ final class MainViewController: CommonViewController {
         title = viewModel.title
         addNavigationButtons()
         setupCollectionView()
+        addEmptyView()
     }
+    
+    private func addEmptyView() {
+        emptyView.addSubview(emptyKit)
+        emptyKit.activeToEdges()
+        emptyKit.update(viewModel.emptyTitle)
+        emptyView.isHidden = true
+    }
+    
     
     private func addNavigationButtons() {
         let rightButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(layputButtonTap))
@@ -113,7 +124,15 @@ extension MainViewController: UICollectionViewDataSource {
 }
 
 extension MainViewController: MainViewModelDelegate {
+    func showIndicator(_ state: Bool) {
+        state ? activityIndicator.show() : activityIndicator.hide()
+    }
+    
     func reloadData() {
         collectionView.reloadData()
+    }
+    
+    func showEmptyView(_ state: Bool) {
+        emptyView.isHidden = state
     }
 }

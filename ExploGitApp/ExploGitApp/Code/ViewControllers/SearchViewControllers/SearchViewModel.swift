@@ -73,7 +73,7 @@ final class SearchViewModel {
 
 extension SearchViewModel: SearchViewModelProtocol {    
     var title: String { Localized.searchViewTitle }
-    var emptyTitle: String { Localized.emptyTitle }
+    var emptyTitle: String { Localized.searchEmptyTitle }
     var searchButtonTitle: String { Localized.searchButtonTitle }
     var searchPlaceholder: String { Localized.searchViewPlaceholder }
     var dataSourceCount: Int { itemsDataSource.count }

@@ -10,10 +10,11 @@ import Foundation
 
 enum Localized {
     static let mainViewTitle = "Git Explorer"
+    static let mainViewEmptyTitle = "Empty Feeds"
     static let searchViewTitle = "Search Repo"
     static let searchViewPlaceholder = "Search query"
     static let searchButtonTitle = "Search"
     static let repoDetailsView = "Details"
-    static let emptyTitle = "Empty search"
+    static let searchEmptyTitle = "Empty search"
     static let filterViewTitle = "Filters"
 }

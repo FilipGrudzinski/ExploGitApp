@@ -16,6 +16,7 @@ enum MainViewLayoutStyle {
 protocol MainViewModelProtocol: class {
     var delegate: MainViewModelDelegate! { get set }
     var title: String { get }
+    var emptyTitle: String { get }
     var dataSourceCount: Int { get }
     var layoutStyle: MainViewLayoutStyle { get }
     
@@ -29,6 +30,8 @@ protocol MainViewModelProtocol: class {
 }
 
 protocol MainViewModelDelegate: class {
+    func showIndicator(_ state: Bool)
+    func showEmptyView(_ state: Bool)
     func reloadData()
 }
 
@@ -43,30 +46,52 @@ final class MainViewModel {
     
     private let coordinator: MainCoordinatorProtocol
     private let worker: APIWorkerProtocol
+    private var itemsDataSource: [MainViewRenderable] = []
+    private var dataSource: [String] = []
     
     init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
         self.worker = worker
     }
     
-    private func search(_ query: String) {
+    private func loadFeeds() {
         worker.fetchFeeds()
             .done { response in
                 print(response)
+                self.delegate.showIndicator(false)
+                self.parseResponse()
         } . catch { error in
             print(error)
         }
+    }
+    
+    private func parseResponse() {
+        itemsDataSource.removeAll()
+        
+        dataSource.forEach { item in
+
+        }
+        
+        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.reloadData()
+    }
+    
+    private func clearViewWhenEmptySearch() {
+        dataSource.removeAll()
+        delegate.showIndicator(false)
+        parseResponse()
     }
 }
 
 extension MainViewModel: MainViewModelProtocol {
     var title: String { Localized.mainViewTitle }
-    var dataSourceCount: Int { 10 }
+    var emptyTitle: String { Localized.mainViewEmptyTitle }
+    var dataSourceCount: Int { dataSource.count }
     var layoutStyle: MainViewLayoutStyle { listStyle ? .list : .gird }
     
     func onViewDidLoad() {
-        #warning("TO DO")
-        search("fgrepo")
+        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        loadFeeds()
     }
     
     func switchStyle() {

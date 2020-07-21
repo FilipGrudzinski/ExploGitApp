@@ -57,6 +57,9 @@
 		DC1AA53724C7107D0002EFA0 /* FiltersViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53624C7107D0002EFA0 /* FiltersViewController.swift */; };
 		DC1AA53A24C710BC0002EFA0 /* FiltersViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53924C710BC0002EFA0 /* FiltersViewModel.swift */; };
 		DC1AA53C24C710C50002EFA0 /* FiltersViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA53B24C710C50002EFA0 /* FiltersViewController.xib */; };
+		DC1AA53E24C712610002EFA0 /* EmptyKitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53D24C712610002EFA0 /* EmptyKitView.swift */; };
+		DC1AA54024C712700002EFA0 /* EmptyKitView.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA53F24C712700002EFA0 /* EmptyKitView.xib */; };
+		DC1AA54224C713C20002EFA0 /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA54124C713C20002EFA0 /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -113,6 +116,9 @@
 		DC1AA53624C7107D0002EFA0 /* FiltersViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewController.swift; sourceTree = "<group>"; };
 		DC1AA53924C710BC0002EFA0 /* FiltersViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersViewModel.swift; sourceTree = "<group>"; };
 		DC1AA53B24C710C50002EFA0 /* FiltersViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersViewController.xib; sourceTree = "<group>"; };
+		DC1AA53D24C712610002EFA0 /* EmptyKitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmptyKitView.swift; sourceTree = "<group>"; };
+		DC1AA53F24C712700002EFA0 /* EmptyKitView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = EmptyKitView.xib; sourceTree = "<group>"; };
+		DC1AA54124C713C20002EFA0 /* UIViewExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -215,6 +221,7 @@
 				DC1AA4F124C6200F0002EFA0 /* LayerExtension.swift */,
 				DC1AA4FA24C620EE0002EFA0 /* UICollectionViewExtension.swift */,
 				DC1AA50D24C649250002EFA0 /* CGFloatExtension.swift */,
+				DC1AA54124C713C20002EFA0 /* UIViewExtensions.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -230,6 +237,8 @@
 			isa = PBXGroup;
 			children = (
 				DC1AA4F824C6206D0002EFA0 /* ActivityIndicator.swift */,
+				DC1AA53D24C712610002EFA0 /* EmptyKitView.swift */,
+				DC1AA53F24C712700002EFA0 /* EmptyKitView.xib */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -448,6 +457,7 @@
 				DC1AA51024C64ABF0002EFA0 /* MainViewCell.xib in Resources */,
 				DC1AA50024C621400002EFA0 /* MainViewController.xib in Resources */,
 				DC1AA52124C6DBF40002EFA0 /* SearchViewController.xib in Resources */,
+				DC1AA54024C712700002EFA0 /* EmptyKitView.xib in Resources */,
 				DC1AA52B24C6E42C0002EFA0 /* SearchViewCell.xib in Resources */,
 				DC1AA4C124C617EA0002EFA0 /* Assets.xcassets in Resources */,
 			);
@@ -526,6 +536,7 @@
 				DC1AA4EE24C61FEC0002EFA0 /* UIViewExtensionsNib.swift in Sources */,
 				DC1AA50624C62ADA0002EFA0 /* GeneralAPIService.swift in Sources */,
 				DC1AA51724C651210002EFA0 /* Localized.swift in Sources */,
+				DC1AA53E24C712610002EFA0 /* EmptyKitView.swift in Sources */,
 				DC1AA4D624C61EE00002EFA0 /* MainNavigationController.swift in Sources */,
 				DC1AA51A24C65A980002EFA0 /* Asset.swift in Sources */,
 				DC1AA4E224C61F850002EFA0 /* BundleExtension.swift in Sources */,
@@ -541,6 +552,7 @@
 				DC1AA51C24C6D9BB0002EFA0 /* FeedsResponse.swift in Sources */,
 				DC1AA50424C627610002EFA0 /* BaseTargetType.swift in Sources */,
 				DC1AA4B824C617EA0002EFA0 /* AppDelegate.swift in Sources */,
+				DC1AA54224C713C20002EFA0 /* UIViewExtensions.swift in Sources */,
 				DC1AA51224C64AEC0002EFA0 /* MainViewCell.swift in Sources */,
 				DC1AA4DA24C61F0C0002EFA0 /* CommonModalNavigationController.swift in Sources */,
 				DC1AA51F24C6DBEC0002EFA0 /* SearchViewController.swift in Sources */,

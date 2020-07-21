@@ -17,10 +17,9 @@ final class SearchViewController: CommonViewController {
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
     @IBOutlet private weak var emptyListView: UIView!
-    @IBOutlet private weak var emptyImageView: UIImageView!
-    @IBOutlet private weak var emptyLabel: UILabel!
-    
+
     private var viewModel: SearchViewModelProtocol
+    private let emptyKit = EmptyKitView.fromNib()
     
     init(with viewModel: SearchViewModelProtocol) {
         self.viewModel = viewModel
@@ -43,13 +42,17 @@ final class SearchViewController: CommonViewController {
         title = viewModel.title
         textField.placeholder = viewModel.searchPlaceholder
         textField.clearButtonMode = .always
-        emptyListView.isHidden = true
         searchButton.setTitle(viewModel.searchButtonTitle, for: .normal)
-        emptyLabel.text = viewModel.emptyTitle
-        emptyLabel.font = .font(with: .regular, size: .medium)
-        emptyLabel.textAlignment = .center
-        emptyImageView.image = Asset.githubLogo.image
+        
+        addEmptyView()
         setupTableView()
+    }
+    
+    private func addEmptyView() {
+        emptyListView.addSubview(emptyKit)
+        emptyKit.activeToEdges()
+        emptyKit.update(viewModel.emptyTitle)
+        emptyListView.isHidden = true
     }
     
     private func setupTableView() {
