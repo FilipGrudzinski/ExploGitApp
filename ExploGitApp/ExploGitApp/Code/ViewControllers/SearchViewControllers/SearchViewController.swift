@@ -10,7 +10,7 @@ import UIKit
 
 final class SearchViewController: CommonViewController {
     private enum Constants {
-        static let cellHeight: CGFloat = 60.0
+        static let cellHeight: CGFloat = 62.0
     }
     
     @IBOutlet private weak var textField: UITextField!

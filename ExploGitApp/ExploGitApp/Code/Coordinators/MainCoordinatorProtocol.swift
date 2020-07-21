@@ -10,11 +10,11 @@ import UIKit
 
 protocol MainCoordinatorProtocol: CoordinatorProtocol {
     func openSearchView()
-    func openDetailsView()
+    func openDetailsView(_ url: URL, title: String)
+    func dismiss()
 }
 
 final class MainCoordinator: MainCoordinatorProtocol {
-    
     private let parentCoordinator: ApplicationParentCoordinatorProtocol
     private let navigationController = MainNavigationController()
     
@@ -37,10 +37,17 @@ final class MainCoordinator: MainCoordinatorProtocol {
         navigationController.pushViewController(viewController, animated: true)
     }
     
-    func openDetailsView() {
-        let viewModel = RepoDetailsViewModel(self)
+    func openDetailsView(_ url: URL, title: String) {
+        let viewModel = RepoDetailsViewModel(self, url: url, title: title)
         let viewController = RepoDetailsViewController(with: viewModel)
         
-        navigationController.pushViewController(viewController, animated: true)
+        let modalNavigationController = CommonModalNavigationController(rootViewController: viewController)
+        
+        modalNavigationController.modalPresentationStyle = .overFullScreen
+        navigationController.present(modalNavigationController, animated: true)
+    }
+    
+    func dismiss() {
+        navigationController.dismiss(animated: true)
     }
 }

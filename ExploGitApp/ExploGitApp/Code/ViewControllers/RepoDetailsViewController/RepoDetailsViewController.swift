@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import WebKit
 
 final class RepoDetailsViewController: CommonViewController {
+     @IBOutlet private weak var webView: WKWebView!
+    
     private var viewModel: RepoDetailsViewModelProtocol
     
     init(with viewModel: RepoDetailsViewModelProtocol) {
@@ -30,10 +33,13 @@ final class RepoDetailsViewController: CommonViewController {
     
     private func setupView() {
         view.backgroundColor = .white
+        webView.backgroundColor = .white
         title = viewModel.title
     }
 }
 
 extension RepoDetailsViewController: RepoDetailsViewModelDelegate {
-    
+    func loadWeb(_ url: URLRequest) {
+        webView.load(url)
+    }
 }

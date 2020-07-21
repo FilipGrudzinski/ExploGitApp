@@ -11,13 +11,30 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="RepoDetailsViewController" customModule="ExploGitApp" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="iN0-l3-epB" id="GR3-ld-1mp"/>
+                <outlet property="webView" destination="wd0-Wp-q8n" id="nLi-81-t8n"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view contentMode="scaleToFill" id="iN0-l3-epB">
             <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <wkWebView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wd0-Wp-q8n">
+                    <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                    <color key="backgroundColor" red="0.36078431370000003" green="0.38823529410000002" blue="0.4039215686" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <wkWebViewConfiguration key="configuration">
+                        <audiovisualMediaTypes key="mediaTypesRequiringUserActionForPlayback" none="YES"/>
+                        <wkPreferences key="preferences"/>
+                    </wkWebViewConfiguration>
+                </wkWebView>
+            </subviews>
             <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+            <constraints>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="trailing" secondItem="wd0-Wp-q8n" secondAttribute="trailing" id="Zm2-pm-X1B"/>
+                <constraint firstItem="wd0-Wp-q8n" firstAttribute="leading" secondItem="vUN-kp-3ea" secondAttribute="leading" id="dsE-X1-0TM"/>
+                <constraint firstItem="wd0-Wp-q8n" firstAttribute="top" secondItem="vUN-kp-3ea" secondAttribute="top" id="nxm-Oe-zN9"/>
+                <constraint firstItem="vUN-kp-3ea" firstAttribute="bottom" secondItem="wd0-Wp-q8n" secondAttribute="bottom" id="vfu-dU-Mj1"/>
+            </constraints>
             <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
             <point key="canvasLocation" x="132" y="154"/>
         </view>

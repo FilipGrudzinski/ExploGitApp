@@ -35,6 +35,7 @@ final class SearchViewModel {
     private let worker: APIWorkerProtocol
     
     private var itemsDataSource: [SearchViewCellItemModel] = []
+    private var dataSource: [ReposSearchResponse.Repository] = []
     
     init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
@@ -45,17 +46,18 @@ final class SearchViewModel {
         worker.fetchReposSearch(query)
             .done { response in
                 self.delegate.showIndicator(false)
-                self.parseResponse(response)
+                self.dataSource = response.items
+                self.parseResponse()
         } .catch { error in
             print(error)
         }
     }
     
-    private func parseResponse(_ response: ReposSearchResponse) {
+    private func parseResponse() {
         itemsDataSource.removeAll()
         
-        response.items.forEach { item in
-            itemsDataSource.append(SearchViewCellItemModel(title: item.fullName ?? .empty, imageURL: item.owner?.avatarUrl))
+        dataSource.forEach { item in
+            itemsDataSource.append(SearchViewCellItemModel(id: item.id, title: item.fullName ?? .empty, language: item.language, imageURL: item.owner?.avatarUrl))
         }
         
         delegate.showEmptyView(itemsDataSource.isNotEmpty)
@@ -63,10 +65,9 @@ final class SearchViewModel {
     }
     
     private func clearViewWhenEmptySearch() {
-        itemsDataSource.removeAll()
+        dataSource.removeAll()
         delegate.showIndicator(false)
-        delegate.showEmptyView(itemsDataSource.isNotEmpty)
-        delegate.reloadData()
+        parseResponse()
     }
 }
 
@@ -96,7 +97,9 @@ extension SearchViewModel: SearchViewModelProtocol {
     }
     
     func didTapCell(at row: Int) {
-        print(itemsDataSource[row])
-        #warning("ToDO")
+        guard let index = dataSource.firstIndex(where: { $0.id == itemsDataSource[row].id }), let url = URL(string: dataSource[index].htmlUrl ?? .empty), let title = dataSource[index].fullName else {
+            return
+        }
+        coordinator.openDetailsView(url, title: title)
     }
 }

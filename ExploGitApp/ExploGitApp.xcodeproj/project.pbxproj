@@ -53,6 +53,7 @@
 		DC1AA52E24C6E99A0002EFA0 /* RepoDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA52D24C6E99A0002EFA0 /* RepoDetailsViewController.swift */; };
 		DC1AA53024C6E9A00002EFA0 /* RepoDetailsViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = DC1AA52F24C6E9A00002EFA0 /* RepoDetailsViewController.xib */; };
 		DC1AA53224C6E9AC0002EFA0 /* RepoDetailsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC1AA53124C6E9AC0002EFA0 /* RepoDetailsViewModel.swift */; };
+		DC1AA53424C705C20002EFA0 /* WebKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DC1AA53324C705C20002EFA0 /* WebKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -105,6 +106,7 @@
 		DC1AA52D24C6E99A0002EFA0 /* RepoDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewController.swift; sourceTree = "<group>"; };
 		DC1AA52F24C6E9A00002EFA0 /* RepoDetailsViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = RepoDetailsViewController.xib; sourceTree = "<group>"; };
 		DC1AA53124C6E9AC0002EFA0 /* RepoDetailsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RepoDetailsViewModel.swift; sourceTree = "<group>"; };
+		DC1AA53324C705C20002EFA0 /* WebKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WebKit.framework; path = System/Library/Frameworks/WebKit.framework; sourceTree = SDKROOT; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -113,6 +115,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DC1AA53424C705C20002EFA0 /* WebKit.framework in Frameworks */,
 				284F9579599E977A53836EFF /* Pods_ExploGitApp.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -355,6 +358,7 @@
 		EA6C95BED1C04278735BE1BC /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				DC1AA53324C705C20002EFA0 /* WebKit.framework */,
 				B75593C6B5BE32602102B6EC /* Pods_ExploGitApp.framework */,
 			);
 			name = Frameworks;

@@ -14,12 +14,14 @@ struct ReposSearchResponse: Decodable {
     var items: [Repository]
     
     struct Repository: Decodable {
-        let id: Int?
+        let id: Int
         let nodeId: String?
         let name: String?
         let fullName: String?
         let owner: Owner?
         let url: String?
+        let htmlUrl: String?
+        let language: String
         
         struct Owner: Decodable {
             let login: String?

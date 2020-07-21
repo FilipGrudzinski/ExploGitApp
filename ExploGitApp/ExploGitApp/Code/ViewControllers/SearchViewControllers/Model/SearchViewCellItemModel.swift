@@ -9,6 +9,8 @@
 import Foundation
 
 struct SearchViewCellItemModel {
+    let id: Int
     let title: String
+    let language: String
     let imageURL: String?
 }

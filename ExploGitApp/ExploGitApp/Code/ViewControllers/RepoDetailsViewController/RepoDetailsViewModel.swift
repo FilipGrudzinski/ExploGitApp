@@ -16,24 +16,28 @@ protocol RepoDetailsViewModelProtocol: class {
 }
 
 protocol RepoDetailsViewModelDelegate: class {
+    func loadWeb(_ url: URLRequest)
 }
 
 final class RepoDetailsViewModel {
     weak var delegate: RepoDetailsViewModelDelegate!
     
     private let coordinator: MainCoordinatorProtocol
-    private let worker: APIWorkerProtocol
+    private let url: URL
+    private let repoTitle: String
     
-    init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
+    init(_ coordinator: MainCoordinatorProtocol, url: URL, title: String) {
         self.coordinator = coordinator
-        self.worker = worker
+        self.repoTitle = title
+        self.url = url
     }
 }
 
 extension RepoDetailsViewModel: RepoDetailsViewModelProtocol {
-    var title: String { Localized.repoDetailsView }
+    var title: String { repoTitle.capitalized }
     
     func onViewDidLoad() {
-        
+        let request = URLRequest(url: url)
+        delegate.loadWeb(request)
     }
 }
