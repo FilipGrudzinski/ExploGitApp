@@ -1,486 +1,90 @@
-ExploGitApp/ExploGitApp.xcworkspace/contents.xcworkspacedata
-ExploGitApp/ExploGitApp.xcworkspace/xcshareddata/IDEWorkspaceChecks.plist
-ExploGitApp/Pods/Alamofire/LICENSE
-ExploGitApp/Pods/Alamofire/README.md
-ExploGitApp/Pods/Alamofire/Source/AFError.swift
-ExploGitApp/Pods/Alamofire/Source/Alamofire.swift
-ExploGitApp/Pods/Alamofire/Source/DispatchQueue+Alamofire.swift
-ExploGitApp/Pods/Alamofire/Source/MultipartFormData.swift
-ExploGitApp/Pods/Alamofire/Source/NetworkReachabilityManager.swift
-ExploGitApp/Pods/Alamofire/Source/Notifications.swift
-ExploGitApp/Pods/Alamofire/Source/ParameterEncoding.swift
-ExploGitApp/Pods/Alamofire/Source/Request.swift
-ExploGitApp/Pods/Alamofire/Source/Response.swift
-ExploGitApp/Pods/Alamofire/Source/ResponseSerialization.swift
-ExploGitApp/Pods/Alamofire/Source/Result.swift
-ExploGitApp/Pods/Alamofire/Source/ServerTrustPolicy.swift
-ExploGitApp/Pods/Alamofire/Source/SessionDelegate.swift
-ExploGitApp/Pods/Alamofire/Source/SessionManager.swift
-ExploGitApp/Pods/Alamofire/Source/TaskDelegate.swift
-ExploGitApp/Pods/Alamofire/Source/Timeline.swift
-ExploGitApp/Pods/Alamofire/Source/Validation.swift
-ExploGitApp/Pods/KeychainSwift/LICENSE
-ExploGitApp/Pods/KeychainSwift/README.md
-ExploGitApp/Pods/KeychainSwift/Sources/KeychainSwift.swift
-ExploGitApp/Pods/KeychainSwift/Sources/KeychainSwiftAccessOptions.swift
-ExploGitApp/Pods/KeychainSwift/Sources/TegKeychainConstants.swift
-ExploGitApp/Pods/Kingfisher/LICENSE
-ExploGitApp/Pods/Kingfisher/README.md
-ExploGitApp/Pods/Kingfisher/Sources/AnimatedImageView.swift
-ExploGitApp/Pods/Kingfisher/Sources/Box.swift
-ExploGitApp/Pods/Kingfisher/Sources/CacheSerializer.swift
-ExploGitApp/Pods/Kingfisher/Sources/Filter.swift
-ExploGitApp/Pods/Kingfisher/Sources/FormatIndicatedCacheSerializer.swift
-ExploGitApp/Pods/Kingfisher/Sources/Image.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImageCache.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImageDownloader.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImageModifier.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImagePrefetcher.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImageProcessor.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImageTransition.swift
-ExploGitApp/Pods/Kingfisher/Sources/ImageView+Kingfisher.swift
-ExploGitApp/Pods/Kingfisher/Sources/Indicator.swift
-ExploGitApp/Pods/Kingfisher/Sources/Kingfisher.h
-ExploGitApp/Pods/Kingfisher/Sources/Kingfisher.swift
-ExploGitApp/Pods/Kingfisher/Sources/KingfisherManager.swift
-ExploGitApp/Pods/Kingfisher/Sources/KingfisherOptionsInfo.swift
-ExploGitApp/Pods/Kingfisher/Sources/Placeholder.swift
-ExploGitApp/Pods/Kingfisher/Sources/RequestModifier.swift
-ExploGitApp/Pods/Kingfisher/Sources/Resource.swift
-ExploGitApp/Pods/Kingfisher/Sources/String+MD5.swift
-ExploGitApp/Pods/Kingfisher/Sources/ThreadHelper.swift
-ExploGitApp/Pods/Kingfisher/Sources/UIButton+Kingfisher.swift
-ExploGitApp/Pods/Manifest.lock
-ExploGitApp/Pods/Moya/License.md
-ExploGitApp/Pods/Moya/Readme.md
-ExploGitApp/Pods/Moya/Sources/Moya/AnyEncodable.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Cancellable.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Endpoint.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Image.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Moya+Alamofire.swift
-ExploGitApp/Pods/Moya/Sources/Moya/MoyaError.swift
-ExploGitApp/Pods/Moya/Sources/Moya/MoyaProvider+Defaults.swift
-ExploGitApp/Pods/Moya/Sources/Moya/MoyaProvider+Internal.swift
-ExploGitApp/Pods/Moya/Sources/Moya/MoyaProvider.swift
-ExploGitApp/Pods/Moya/Sources/Moya/MultiTarget.swift
-ExploGitApp/Pods/Moya/Sources/Moya/MultipartFormData.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Plugin.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Plugins/AccessTokenPlugin.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Plugins/CredentialsPlugin.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Plugins/NetworkActivityPlugin.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Plugins/NetworkLoggerPlugin.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Response.swift
-ExploGitApp/Pods/Moya/Sources/Moya/TargetType.swift
-ExploGitApp/Pods/Moya/Sources/Moya/Task.swift
-ExploGitApp/Pods/Moya/Sources/Moya/URL+Moya.swift
-ExploGitApp/Pods/Moya/Sources/Moya/URLRequest+Encoding.swift
-ExploGitApp/Pods/Moya/Sources/Moya/ValidationType.swift
-ExploGitApp/Pods/Moya/Sources/RxMoya/MoyaProvider+Rx.swift
-ExploGitApp/Pods/Moya/Sources/RxMoya/Observable+Response.swift
-ExploGitApp/Pods/Moya/Sources/RxMoya/Single+Response.swift
-ExploGitApp/Pods/OAuthSwift/LICENSE
-ExploGitApp/Pods/OAuthSwift/README.md
-ExploGitApp/Pods/OAuthSwift/Sources/Collection+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/Data+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/Dictionary+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/HMAC.swift
-ExploGitApp/Pods/OAuthSwift/Sources/Int+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/NSError+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/NotificationCenter+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuth1Swift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuth2Swift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftClient.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftCredential.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftError.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftHTTPRequest.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftMultipartData.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftResponse.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthSwiftURLHandlerType.swift
-ExploGitApp/Pods/OAuthSwift/Sources/OAuthWebViewController.swift
-ExploGitApp/Pods/OAuthSwift/Sources/SHA1.swift
-ExploGitApp/Pods/OAuthSwift/Sources/String+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/UIApplication+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/URL+OAuthSwift.swift
-ExploGitApp/Pods/OAuthSwift/Sources/URLConvertible.swift
-ExploGitApp/Pods/OAuthSwift/Sources/Utils.swift
-ExploGitApp/Pods/Pods.xcodeproj/project.pbxproj
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.h
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSNotificationCenter+AnyPromise.m
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSNotificationCenter+Promise.swift
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSObject+Promise.swift
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSTask+AnyPromise.h
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSTask+AnyPromise.m
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSURLSession+AnyPromise.h
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSURLSession+AnyPromise.m
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/NSURLSession+Promise.swift
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/PMKFoundation.h
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/Process+Promise.swift
-ExploGitApp/Pods/PromiseKit/Extensions/Foundation/Sources/afterlife.swift
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/PMKUIKit.h
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/UIView+AnyPromise.h
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/UIView+AnyPromise.m
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/UIView+Promise.swift
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/UIViewController+AnyPromise.h
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/UIViewController+AnyPromise.m
-ExploGitApp/Pods/PromiseKit/Extensions/UIKit/Sources/UIViewPropertyAnimator+Promise.swift
-ExploGitApp/Pods/PromiseKit/LICENSE
-ExploGitApp/Pods/PromiseKit/README.md
-ExploGitApp/Pods/PromiseKit/Sources/AnyPromise+Private.h
-ExploGitApp/Pods/PromiseKit/Sources/AnyPromise.h
-ExploGitApp/Pods/PromiseKit/Sources/AnyPromise.m
-ExploGitApp/Pods/PromiseKit/Sources/AnyPromise.swift
-ExploGitApp/Pods/PromiseKit/Sources/Box.swift
-ExploGitApp/Pods/PromiseKit/Sources/Catchable.swift
-ExploGitApp/Pods/PromiseKit/Sources/Configuration.swift
-ExploGitApp/Pods/PromiseKit/Sources/CustomStringConvertible.swift
-ExploGitApp/Pods/PromiseKit/Sources/Deprecations.swift
-ExploGitApp/Pods/PromiseKit/Sources/Error.swift
-ExploGitApp/Pods/PromiseKit/Sources/Guarantee.swift
-ExploGitApp/Pods/PromiseKit/Sources/LogEvent.swift
-ExploGitApp/Pods/PromiseKit/Sources/NSMethodSignatureForBlock.m
-ExploGitApp/Pods/PromiseKit/Sources/PMKCallVariadicBlock.m
-ExploGitApp/Pods/PromiseKit/Sources/Promise.swift
-ExploGitApp/Pods/PromiseKit/Sources/PromiseKit.h
-ExploGitApp/Pods/PromiseKit/Sources/Resolver.swift
-ExploGitApp/Pods/PromiseKit/Sources/Thenable.swift
-ExploGitApp/Pods/PromiseKit/Sources/after.m
-ExploGitApp/Pods/PromiseKit/Sources/after.swift
-ExploGitApp/Pods/PromiseKit/Sources/dispatch_promise.m
-ExploGitApp/Pods/PromiseKit/Sources/firstly.swift
-ExploGitApp/Pods/PromiseKit/Sources/fwd.h
-ExploGitApp/Pods/PromiseKit/Sources/hang.m
-ExploGitApp/Pods/PromiseKit/Sources/hang.swift
-ExploGitApp/Pods/PromiseKit/Sources/join.m
-ExploGitApp/Pods/PromiseKit/Sources/race.m
-ExploGitApp/Pods/PromiseKit/Sources/race.swift
-ExploGitApp/Pods/PromiseKit/Sources/when.m
-ExploGitApp/Pods/PromiseKit/Sources/when.swift
-ExploGitApp/Pods/Result/LICENSE
-ExploGitApp/Pods/Result/README.md
-ExploGitApp/Pods/Result/Result/AnyError.swift
-ExploGitApp/Pods/Result/Result/NoError.swift
-ExploGitApp/Pods/Result/Result/Result.swift
-ExploGitApp/Pods/Result/Result/ResultProtocol.swift
-ExploGitApp/Pods/RxSwift/LICENSE.md
-ExploGitApp/Pods/RxSwift/Platform/AtomicInt.swift
-ExploGitApp/Pods/RxSwift/Platform/DataStructures/Bag.swift
-ExploGitApp/Pods/RxSwift/Platform/DataStructures/InfiniteSequence.swift
-ExploGitApp/Pods/RxSwift/Platform/DataStructures/PriorityQueue.swift
-ExploGitApp/Pods/RxSwift/Platform/DataStructures/Queue.swift
-ExploGitApp/Pods/RxSwift/Platform/DeprecationWarner.swift
-ExploGitApp/Pods/RxSwift/Platform/DispatchQueue+Extensions.swift
-ExploGitApp/Pods/RxSwift/Platform/Platform.Darwin.swift
-ExploGitApp/Pods/RxSwift/Platform/Platform.Linux.swift
-ExploGitApp/Pods/RxSwift/Platform/RecursiveLock.swift
-ExploGitApp/Pods/RxSwift/README.md
-ExploGitApp/Pods/RxSwift/RxSwift/AnyObserver.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Cancelable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Concurrency/AsyncLock.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Concurrency/Lock.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Concurrency/LockOwnerType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Concurrency/SynchronizedDisposeType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Concurrency/SynchronizedOnType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Concurrency/SynchronizedUnsubscribeType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/ConnectableObservableType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Deprecated.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/AnonymousDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/BinaryDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/BooleanDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/CompositeDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/Disposables.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/DisposeBag.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/DisposeBase.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/NopDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/RefCountDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/ScheduledDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/SerialDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/SingleAssignmentDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Disposables/SubscriptionDisposable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Errors.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Event.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Extensions/Bag+Rx.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Extensions/String+Rx.swift
-ExploGitApp/Pods/RxSwift/RxSwift/GroupedObservable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/ImmediateSchedulerType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/ObservableConvertibleType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/ObservableType+Extensions.swift
-ExploGitApp/Pods/RxSwift/RxSwift/ObservableType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/AddRef.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Amb.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/AsMaybe.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/AsSingle.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Buffer.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Catch.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/CombineLatest+Collection.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/CombineLatest+arity.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/CombineLatest.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Concat.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Create.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Debounce.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Debug.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/DefaultIfEmpty.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Deferred.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Delay.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/DelaySubscription.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Dematerialize.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/DistinctUntilChanged.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Do.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/ElementAt.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Empty.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Enumerated.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Error.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Filter.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/First.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Generate.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/GroupBy.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Just.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Map.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Materialize.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Merge.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Multicast.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Never.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/ObserveOn.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Optional.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Producer.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Range.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Reduce.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Repeat.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/RetryWhen.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Sample.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Scan.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Sequence.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/ShareReplayScope.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/SingleAsync.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Sink.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Skip.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/SkipUntil.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/SkipWhile.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/StartWith.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/SubscribeOn.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Switch.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/SwitchIfEmpty.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Take.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/TakeLast.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/TakeUntil.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/TakeWhile.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Throttle.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Timeout.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Timer.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/ToArray.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Using.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Window.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/WithLatestFrom.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Zip+Collection.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Zip+arity.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observables/Zip.swift
-ExploGitApp/Pods/RxSwift/RxSwift/ObserverType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observers/AnonymousObserver.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observers/ObserverBase.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Observers/TailRecursiveSink.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Reactive.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Rx.swift
-ExploGitApp/Pods/RxSwift/RxSwift/RxMutableBox.swift
-ExploGitApp/Pods/RxSwift/RxSwift/SchedulerType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/ConcurrentDispatchQueueScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/ConcurrentMainScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/CurrentThreadScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/HistoricalScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/HistoricalSchedulerTimeConverter.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/Internal/DispatchQueueConfiguration.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/Internal/InvocableScheduledItem.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/Internal/InvocableType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/Internal/ScheduledItem.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/Internal/ScheduledItemType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/MainScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/OperationQueueScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/RecursiveScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/SchedulerServices+Emulation.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/SerialDispatchQueueScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/VirtualTimeConverterType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Schedulers/VirtualTimeScheduler.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Subjects/AsyncSubject.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Subjects/BehaviorSubject.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Subjects/PublishSubject.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Subjects/ReplaySubject.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Subjects/SubjectType.swift
-ExploGitApp/Pods/RxSwift/RxSwift/SwiftSupport/SwiftSupport.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/Completable+AndThen.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/Completable.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/Maybe.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/ObservableType+PrimitiveSequence.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/PrimitiveSequence+Zip+arity.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/PrimitiveSequence.swift
-ExploGitApp/Pods/RxSwift/RxSwift/Traits/Single.swift
-ExploGitApp/Pods/SwiftGen/CHANGELOG.md
-ExploGitApp/Pods/SwiftGen/LICENCE
-ExploGitApp/Pods/SwiftGen/README.md
-ExploGitApp/Pods/SwiftGen/bin/swiftgen
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Commander
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Versions/A/Commander
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Versions/Current/Commander
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Commander.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Kanna
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Versions/A/Kanna
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Versions/Current/Kanna
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Kanna.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/PathKit
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Versions/A/PathKit
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Versions/Current/PathKit
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/PathKit.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Stencil
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Versions/A/Stencil
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Versions/Current/Stencil
-ExploGitApp/Pods/SwiftGen/lib/Stencil.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/StencilSwiftKit
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Versions/A/StencilSwiftKit
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Versions/Current/StencilSwiftKit
-ExploGitApp/Pods/SwiftGen/lib/StencilSwiftKit.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/SwiftGenKit
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Versions/A/SwiftGenKit
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Versions/Current/SwiftGenKit
-ExploGitApp/Pods/SwiftGen/lib/SwiftGenKit.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Versions/A/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Versions/A/Yams
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Versions/A/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Versions/Current/Resources/Info.plist
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Versions/Current/Yams
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Versions/Current/_CodeSignature/CodeResources
-ExploGitApp/Pods/SwiftGen/lib/Yams.framework/Yams
-ExploGitApp/Pods/SwiftGen/lib/libswiftCore.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftCoreFoundation.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftCoreGraphics.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftDarwin.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftDispatch.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftFoundation.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftIOKit.dylib
-ExploGitApp/Pods/SwiftGen/lib/libswiftObjectiveC.dylib
-ExploGitApp/Pods/SwiftGen/templates/colors/literals-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/colors/literals-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/colors/swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/colors/swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/coredata/swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/coredata/swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/fonts/swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/fonts/swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/ib/scenes-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/ib/scenes-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/ib/segues-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/ib/segues-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/json/inline-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/json/inline-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/json/runtime-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/json/runtime-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/plist/inline-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/plist/inline-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/plist/runtime-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/plist/runtime-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/strings/flat-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/strings/flat-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/strings/objc-h.stencil
-ExploGitApp/Pods/SwiftGen/templates/strings/objc-m.stencil
-ExploGitApp/Pods/SwiftGen/templates/strings/structured-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/strings/structured-swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/xcassets/swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/xcassets/swift5.stencil
-ExploGitApp/Pods/SwiftGen/templates/yaml/inline-swift4.stencil
-ExploGitApp/Pods/SwiftGen/templates/yaml/inline-swift5.stencil
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire-Info.plist
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire-dummy.m
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire-prefix.pch
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire-umbrella.h
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire.modulemap
-ExploGitApp/Pods/Target Support Files/Alamofire/Alamofire.release.xcconfig
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift-Info.plist
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift-dummy.m
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift-prefix.pch
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift-umbrella.h
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift.modulemap
-ExploGitApp/Pods/Target Support Files/KeychainSwift/KeychainSwift.release.xcconfig
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher-Info.plist
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher-dummy.m
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher-prefix.pch
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher-umbrella.h
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher.modulemap
-ExploGitApp/Pods/Target Support Files/Kingfisher/Kingfisher.release.xcconfig
-ExploGitApp/Pods/Target Support Files/Moya/Moya-Info.plist
-ExploGitApp/Pods/Target Support Files/Moya/Moya-dummy.m
-ExploGitApp/Pods/Target Support Files/Moya/Moya-prefix.pch
-ExploGitApp/Pods/Target Support Files/Moya/Moya-umbrella.h
-ExploGitApp/Pods/Target Support Files/Moya/Moya.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/Moya/Moya.modulemap
-ExploGitApp/Pods/Target Support Files/Moya/Moya.release.xcconfig
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift-Info.plist
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift-dummy.m
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift-prefix.pch
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift-umbrella.h
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift.modulemap
-ExploGitApp/Pods/Target Support Files/OAuthSwift/OAuthSwift.release.xcconfig
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-Info.plist
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-acknowledgements.markdown
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-acknowledgements.plist
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-dummy.m
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-frameworks-Debug-input-files.xcfilelist
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-frameworks-Debug-output-files.xcfilelist
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-frameworks-Release-input-files.xcfilelist
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-frameworks-Release-output-files.xcfilelist
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-frameworks.sh
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp-umbrella.h
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.modulemap
-ExploGitApp/Pods/Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit-Info.plist
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit-dummy.m
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit-prefix.pch
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit-umbrella.h
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit.modulemap
-ExploGitApp/Pods/Target Support Files/PromiseKit/PromiseKit.release.xcconfig
-ExploGitApp/Pods/Target Support Files/Result/Result-Info.plist
-ExploGitApp/Pods/Target Support Files/Result/Result-dummy.m
-ExploGitApp/Pods/Target Support Files/Result/Result-prefix.pch
-ExploGitApp/Pods/Target Support Files/Result/Result-umbrella.h
-ExploGitApp/Pods/Target Support Files/Result/Result.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/Result/Result.modulemap
-ExploGitApp/Pods/Target Support Files/Result/Result.release.xcconfig
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift-Info.plist
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift-dummy.m
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift-prefix.pch
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift-umbrella.h
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift.modulemap
-ExploGitApp/Pods/Target Support Files/RxSwift/RxSwift.release.xcconfig
-ExploGitApp/Pods/Target Support Files/SwiftGen/SwiftGen.debug.xcconfig
-ExploGitApp/Pods/Target Support Files/SwiftGen/SwiftGen.release.xcconfig
-ExploGitApp/default.profraw
+# Xcode
+#
+# gitignore contributors: remember to update Global/Xcode.gitignore, Objective-C.gitignore & Swift.gitignore
+
+## User settings
+xcuserdata/
+
+## compatibility with Xcode 8 and earlier (ignoring not required starting Xcode 9)
+*.xcscmblueprint
+*.xccheckout
+
+## compatibility with Xcode 3 and earlier (ignoring not required starting Xcode 4)
+build/
+DerivedData/
+*.moved-aside
+*.pbxuser
+!default.pbxuser
+*.mode1v3
+!default.mode1v3
+*.mode2v3
+!default.mode2v3
+*.perspectivev3
+!default.perspectivev3
+
+## Obj-C/Swift specific
+*.hmap
+
+## App packaging
+*.ipa
+*.dSYM.zip
+*.dSYM
+
+## Playgrounds
+timeline.xctimeline
+playground.xcworkspace
+
+# Swift Package Manager
+#
+# Add this line if you want to avoid checking in source code from Swift Package Manager dependencies.
+# Packages/
+# Package.pins
+# Package.resolved
+# *.xcodeproj
+#
+# Xcode automatically generates this directory with a .xcworkspacedata file and xcuserdata
+# hence it is not needed unless you have added a package configuration file to your project
+# .swiftpm
+
+.build/
+
+# CocoaPods
+#
+# We recommend against adding the Pods directory to your .gitignore. However
+# you should judge for yourself, the pros and cons are mentioned at:
+# https://guides.cocoapods.org/using/using-cocoapods.html#should-i-check-the-pods-directory-into-source-control
+#
+# Pods/
+#
+# Add this line if you want to avoid checking in source code from the Xcode workspace
+# *.xcworkspace
+
+# Carthage
+#
+# Add this line if you want to avoid checking in source code from Carthage dependencies.
+# Carthage/Checkouts
+
+Carthage/Build/
+
+# Accio dependency management
+Dependencies/
+.accio/
+
+# fastlane
+#
+# It is recommended to not store the screenshots in the git repo.
+# Instead, use fastlane to re-generate the screenshots whenever they are needed.
+# For more information about the recommended setup visit:
+# https://docs.fastlane.tools/best-practices/source-control/#source-control
+
+fastlane/report.xml
+fastlane/Preview.html
+fastlane/screenshots/**/*.png
+fastlane/test_output
+
+# Code Injection
+#
+# After new code Injection tools there's a generated folder /iOSInjectionProject
+# https://github.com/johnno1962/injectionforxcode
+
+iOSInjectionProject/
