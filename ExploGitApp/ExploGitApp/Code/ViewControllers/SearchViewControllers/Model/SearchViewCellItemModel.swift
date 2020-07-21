@@ -10,4 +10,5 @@ import Foundation
 
 struct SearchViewCellItemModel {
     let title: String
+    let imageURL: String?
 }

@@ -7,9 +7,11 @@
 //
 
 import UIKit
+import Kingfisher
 
 final class SearchViewCell: UITableViewCell {
     @IBOutlet private weak var titleLabel: UILabel!
+    @IBOutlet private weak var avatarImage: UIImageView!
     
     override func awakeFromNib() {
         super.awakeFromNib()
@@ -24,5 +26,9 @@ final class SearchViewCell: UITableViewCell {
     
     func update(_ model: SearchViewCellItemModel) {
         titleLabel.text = model.title
+        guard let imageUrl = model.imageURL, let url = URL(string: imageUrl) else {
+            return
+        }
+        avatarImage.kf.setImage(with: url)
     }
 }

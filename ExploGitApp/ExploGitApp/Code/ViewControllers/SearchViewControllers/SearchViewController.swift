@@ -16,6 +16,9 @@ final class SearchViewController: CommonViewController {
     @IBOutlet private weak var textField: UITextField!
     @IBOutlet private weak var searchButton: UIButton!
     @IBOutlet private weak var tableView: UITableView!
+    @IBOutlet private weak var emptyListView: UIView!
+    @IBOutlet private weak var emptyImageView: UIImageView!
+    @IBOutlet private weak var emptyLabel: UILabel!
     
     private var viewModel: SearchViewModelProtocol
     
@@ -33,13 +36,19 @@ final class SearchViewController: CommonViewController {
         super.viewDidLoad()
         
         setupView()
+        viewModel.onViewDidLoad()
     }
     
     private func setupView() {
         title = viewModel.title
         textField.placeholder = viewModel.searchPlaceholder
         textField.clearButtonMode = .always
+        emptyListView.isHidden = true
         searchButton.setTitle(viewModel.searchButtonTitle, for: .normal)
+        emptyLabel.text = viewModel.emptyTitle
+        emptyLabel.font = .font(with: .regular, size: .medium)
+        emptyLabel.textAlignment = .center
+        emptyImageView.image = Asset.githubLogo.image
         setupTableView()
     }
     
@@ -55,6 +64,7 @@ final class SearchViewController: CommonViewController {
     
     @IBAction private func searchButtonTap(_ sender: Any) {
         viewModel.searchButtonTap(textField.text)
+        textField.resignFirstResponder()
     }
 }
 
@@ -80,5 +90,13 @@ extension SearchViewController: UITableViewDataSource {
 extension SearchViewController: SearchViewModelDelegate {
     func showIndicator(_ state: Bool) {
         state ? activityIndicator.show() : activityIndicator.hide()
+    }
+    
+    func reloadData() {
+        tableView.reloadData()
+    }
+    
+    func showEmptyView(_ state: Bool) {
+        emptyListView.isHidden = state
     }
 }

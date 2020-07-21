@@ -8,4 +8,28 @@
 
 import Foundation
 
-struct ReposSearchResponse: Decodable { }
+struct ReposSearchResponse: Decodable {
+    let totalCount: Int
+    let incompleteResults: Bool
+    var items: [Repository]
+    
+    struct Repository: Decodable {
+        let id: Int?
+        let nodeId: String?
+        let name: String?
+        let fullName: String?
+        let owner: Owner?
+        let url: String?
+        
+        struct Owner: Decodable {
+            let login: String?
+            let id: Int?
+            let nodeId: String?
+            let avatarUrl: String?
+            let gravatarID: String?
+            let url: String?
+            let receivedEventsUrl: String?
+            let type: String?
+        }
+    }
+}

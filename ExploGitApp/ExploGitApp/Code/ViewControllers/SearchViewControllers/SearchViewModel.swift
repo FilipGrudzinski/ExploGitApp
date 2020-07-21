@@ -11,10 +11,12 @@ import Foundation
 protocol SearchViewModelProtocol: class {
     var delegate: SearchViewModelDelegate! { get set }
     var title: String { get }
+    var emptyTitle: String { get }
     var dataSourceCount: Int { get }
     var searchButtonTitle: String { get }
     var searchPlaceholder: String { get }
     
+    func onViewDidLoad()
     func searchButtonTap(_ value: String?)
     func item(at row: Int) -> SearchViewCellItemModel
     func didTapCell(at row: Int)
@@ -22,6 +24,8 @@ protocol SearchViewModelProtocol: class {
 
 protocol SearchViewModelDelegate: class {
     func showIndicator(_ state: Bool)
+    func showEmptyView(_ state: Bool)
+    func reloadData()
 }
 
 final class SearchViewModel {
@@ -41,21 +45,45 @@ final class SearchViewModel {
         worker.fetchReposSearch(query)
             .done { response in
                 self.delegate.showIndicator(false)
-                print(response)
+                self.parseResponse(response)
         } .catch { error in
             print(error)
         }
     }
+    
+    private func parseResponse(_ response: ReposSearchResponse) {
+        itemsDataSource.removeAll()
+        
+        response.items.forEach { item in
+            itemsDataSource.append(SearchViewCellItemModel(title: item.fullName ?? .empty, imageURL: item.owner?.avatarUrl))
+        }
+        
+        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.reloadData()
+    }
+    
+    private func clearViewWhenEmptySearch() {
+        itemsDataSource.removeAll()
+        delegate.showIndicator(false)
+        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.reloadData()
+    }
 }
 
-extension SearchViewModel: SearchViewModelProtocol {
+extension SearchViewModel: SearchViewModelProtocol {    
     var title: String { Localized.searchViewTitle }
+    var emptyTitle: String { Localized.emptyTitle }
     var searchButtonTitle: String { Localized.searchButtonTitle }
     var searchPlaceholder: String { Localized.searchViewPlaceholder }
     var dataSourceCount: Int { itemsDataSource.count }
     
+    func onViewDidLoad() {
+        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+    }
+    
     func searchButtonTap(_ value: String?) {
-        guard let value = value else {
+        guard let value = value, value.trimmingCharacters(in: .whitespaces).isNotEmpty else {
+            clearViewWhenEmptySearch()
             return
         }
         

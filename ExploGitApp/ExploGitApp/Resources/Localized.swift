@@ -14,4 +14,5 @@ enum Localized {
     static let searchViewPlaceholder = "Search query"
     static let searchButtonTitle = "Search"
     static let repoDetailsView = "Details"
+    static let emptyTitle = "Empty search"
 }
