@@ -20,4 +20,8 @@ enum Localized {
     static let repoDetailsView = "Details"
     static let searchEmptyTitle = "Empty search"
     static let filterViewTitle = "Filters"
+    static let commonCellAuthorLabelText = "Autor"
+    static let commonAlertTitle = "Błąd"
+    static let commonAlertDescription = "Ups.. coś poszło nie tak"
+    static let commonAlertButtonTitle = "Ok"
 }

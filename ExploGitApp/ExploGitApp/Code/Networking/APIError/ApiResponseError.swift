@@ -9,10 +9,14 @@
 import Foundation
 
 struct ApiResponseError: Decodable, Error {
-    let error: ErrorResponseModel
+    
+    let message: String
+    let errors: [ErrorResponseModel]?
+    let documentationUrl: String?
     
     struct ErrorResponseModel: Decodable, Error {
-        
-        let code: APIError
+        let resource: String?
+        let field: String?
+        let code: String?
     }
 }

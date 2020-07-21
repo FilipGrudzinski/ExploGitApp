@@ -33,9 +33,10 @@ protocol MainViewModelProtocol: class {
 
 protocol MainViewModelDelegate: class {
     func showIndicator(_ state: Bool)
-    func showEmptyView(_ state: Bool)
+    func hideEmptyView(_ state: Bool)
     func updateNavigationButtons()
     func reloadData()
+    func presentAlert(_ model: CommonAlertModel)
 }
 
 final class MainViewModel {
@@ -65,7 +66,7 @@ final class MainViewModel {
                 self.delegate.showIndicator(false)
                 self.parseResponse()
         } . catch { error in
-            print(error)
+            self.errorHandler(error)
         }
     }
     
@@ -76,7 +77,7 @@ final class MainViewModel {
 
         }
         
-        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.hideEmptyView(itemsDataSource.isNotEmpty)
         delegate.reloadData()
     }
     
@@ -84,6 +85,18 @@ final class MainViewModel {
         dataSource.removeAll()
         delegate.showIndicator(false)
         parseResponse()
+    }
+    
+    private func errorHandler(_ error: Error) {
+        delegate.showIndicator(false)
+        guard let _ = error as? ApiResponseError else {
+            fatalError()
+        }
+        
+        delegate.hideEmptyView(true)
+        
+        let model = CommonAlertModel(title: Localized.commonAlertTitle, description: Localized.commonAlertDescription, buttonTitle: Localized.commonAlertButtonTitle)
+        delegate.presentAlert(model)
     }
 }
 
@@ -96,7 +109,7 @@ extension MainViewModel: MainViewModelProtocol {
     var layoutStyle: MainViewLayoutStyle { listStyle ? .list : .gird }
     
     func onViewDidLoad() {
-        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.hideEmptyView(itemsDataSource.isNotEmpty)
         loadFeeds()
     }
     

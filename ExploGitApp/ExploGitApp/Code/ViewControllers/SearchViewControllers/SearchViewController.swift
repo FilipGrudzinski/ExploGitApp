@@ -43,6 +43,7 @@ final class SearchViewController: CommonViewController {
         textField.placeholder = viewModel.searchPlaceholder
         textField.clearButtonMode = .always
         searchButton.setTitle(viewModel.searchButtonTitle, for: .normal)
+        searchButton.tintColor = .appBlue
         
         addEmptyView()
         setupTableView()
@@ -99,7 +100,13 @@ extension SearchViewController: SearchViewModelDelegate {
         tableView.reloadData()
     }
     
-    func showEmptyView(_ state: Bool) {
+    func hideEmptyView(_ state: Bool) {
         emptyListView.isHidden = state
+    }
+    
+    func presentAlert(_ model: CommonAlertModel) {
+        AlertHelper.commonAlert(model: model, confirmHandler: { [weak self] in
+            self?.hideEmptyView(false)
+        }, controller: self).show()
     }
 }

@@ -24,8 +24,9 @@ protocol SearchViewModelProtocol: class {
 
 protocol SearchViewModelDelegate: class {
     func showIndicator(_ state: Bool)
-    func showEmptyView(_ state: Bool)
+    func hideEmptyView(_ state: Bool)
     func reloadData()
+    func presentAlert(_ model: CommonAlertModel)
 }
 
 final class SearchViewModel {
@@ -43,13 +44,13 @@ final class SearchViewModel {
     }
     
     private func sendSearchRequest(_ query: String) {
-        worker.fetchReposSearch(query)
+        worker.fetchReposSearch(.space)
             .done { response in
                 self.delegate.showIndicator(false)
                 self.dataSource = response.items
                 self.parseResponse()
         } .catch { error in
-            print(error)
+            self.errorHandler(error)
         }
     }
     
@@ -60,7 +61,7 @@ final class SearchViewModel {
             itemsDataSource.append(SearchViewCellItemModel(id: item.id, title: item.fullName ?? .empty, language: item.language, imageURL: item.owner?.avatarUrl))
         }
         
-        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.hideEmptyView(itemsDataSource.isNotEmpty)
         delegate.reloadData()
     }
     
@@ -68,6 +69,18 @@ final class SearchViewModel {
         dataSource.removeAll()
         delegate.showIndicator(false)
         parseResponse()
+    }
+    
+    private func errorHandler(_ error: Error) {
+        delegate.showIndicator(false)
+        guard let _ = error as? ApiResponseError else {
+            fatalError()
+        }
+        
+        delegate.hideEmptyView(true)
+        
+        let model = CommonAlertModel(title: Localized.commonAlertTitle, description: Localized.commonAlertDescription, buttonTitle: Localized.commonAlertButtonTitle)
+        delegate.presentAlert(model)
     }
 }
 
@@ -79,7 +92,7 @@ extension SearchViewModel: SearchViewModelProtocol {
     var dataSourceCount: Int { itemsDataSource.count }
     
     func onViewDidLoad() {
-        delegate.showEmptyView(itemsDataSource.isNotEmpty)
+        delegate.hideEmptyView(itemsDataSource.isNotEmpty)
     }
     
     func searchButtonTap(_ value: String?) {

@@ -132,11 +132,17 @@ extension MainViewController: MainViewModelDelegate {
         collectionView.reloadData()
     }
     
-    func showEmptyView(_ state: Bool) {
+    func hideEmptyView(_ state: Bool) {
         emptyView.isHidden = state
     }
     
     func updateNavigationButtons() {
         addNavigationButtons()
+    }
+    
+    func presentAlert(_ model: CommonAlertModel) {
+        AlertHelper.commonAlert(model: model, confirmHandler: { [weak self] in
+            self?.hideEmptyView(false)
+        }, controller: self).show()
     }
 }
