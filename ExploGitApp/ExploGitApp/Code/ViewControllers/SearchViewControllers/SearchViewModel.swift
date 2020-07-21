@@ -44,7 +44,7 @@ final class SearchViewModel {
     }
     
     private func sendSearchRequest(_ query: String) {
-        worker.fetchReposSearch(.space)
+        worker.fetchReposSearch(query)
             .done { response in
                 self.delegate.showIndicator(false)
                 self.dataSource = response.items

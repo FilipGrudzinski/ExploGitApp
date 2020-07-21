@@ -27,6 +27,12 @@ final class LoginViewModel {
     private let coordinator: MainCoordinatorProtocol
     private let worker: APIWorkerProtocol
     
+    private var reload: Bool = false {
+        didSet {
+            coordinator.start()
+        }
+    }
+    
     init(_ coordinator: MainCoordinatorProtocol, worker: APIWorkerProtocol = APIWorker()) {
         self.coordinator = coordinator
         self.worker = worker
@@ -57,6 +63,6 @@ extension LoginViewModel: LoginViewModelProtocol {
         guard let code: String = KeychainManager.get(from: .loginToken), code != .empty else {
             return
         }
-        worker.getAccessToken(code)
+        reload = worker.getAccessToken(code)
     }
 }

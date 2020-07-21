@@ -18,7 +18,7 @@ extension GeneralAPIService: TargetType {
     var path: String {
         switch self {
         case .feed:
-            return "/feeds"
+            return "/search"
         case .repos:
             return "/search/repositories"
         }
@@ -53,7 +53,8 @@ extension GeneralAPIService: TargetType {
         switch self {
         case let .repos(query):
             params["q"] = query
-        default: break
+        case .feed:
+            params["q"] = "Feeds"
         }
         return params
     }
