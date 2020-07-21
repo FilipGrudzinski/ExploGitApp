@@ -20,6 +20,7 @@ PODS:
     - PromiseKit/CorePromise
   - Result (4.1.0)
   - RxSwift (4.5.0)
+  - SwiftGen (6.2.0)
 
 DEPENDENCIES:
   - Alamofire (= 4.7.3)
@@ -28,6 +29,7 @@ DEPENDENCIES:
   - Moya/RxSwift (= 13.0.1)
   - OAuthSwift
   - PromiseKit (= 6.10.0)
+  - SwiftGen
 
 SPEC REPOS:
   trunk:
@@ -39,6 +41,7 @@ SPEC REPOS:
     - PromiseKit
     - Result
     - RxSwift
+    - SwiftGen
 
 SPEC CHECKSUMS:
   Alamofire: c7287b6e5d7da964a70935e5db17046b7fde6568
@@ -49,7 +52,8 @@ SPEC CHECKSUMS:
   PromiseKit: 1fdaeb6c0a94a5114fcb814ff3d772b86886ad4e
   Result: bd966fac789cc6c1563440b348ab2598cc24d5c7
   RxSwift: f172070dfd1a93d70a9ab97a5a01166206e1c575
+  SwiftGen: 77e88c8609381660cc1084c5ba8e1dc6065de692
 
-PODFILE CHECKSUM: 7abd4000e8aab95d595cf73cd530b242fbb0c55e
+PODFILE CHECKSUM: b8a92beac0aa1df99d7cb763d2d99cd8f194df10
 
 COCOAPODS: 1.9.3

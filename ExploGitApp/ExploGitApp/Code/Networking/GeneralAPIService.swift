@@ -19,7 +19,7 @@ extension GeneralAPIService: TargetType {
     var path: String {
         switch self {
         case .feed:
-            return ""
+            return "/feeds"
         case .repos:
             return "/search/repositories"
         case .details:

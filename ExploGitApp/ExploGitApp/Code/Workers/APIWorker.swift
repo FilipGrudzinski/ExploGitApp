@@ -11,11 +11,16 @@ import Alamofire
 import PromiseKit
 
 protocol APIWorkerProtocol {
+    func fetchFeeds() -> Promise<FeedsResponse>
     func fetchReposSearch(_ query: String) -> Promise<ReposSearchResponse>
 }
 
 final class APIWorker: APIWorkerProtocol {
     let provider = MoyaProvider<GeneralAPIService>(plugins: [NetworkLoggerPlugin(verbose: true)])
+    
+    func fetchFeeds() -> Promise<FeedsResponse> {
+        return provider.request(.feed, type: FeedsResponse.self)
+    }
     
     func fetchReposSearch(_ query: String) -> Promise<ReposSearchResponse> {
         return provider.request(.repos(query: query), type: ReposSearchResponse.self)

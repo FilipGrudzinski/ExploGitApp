@@ -39,7 +39,24 @@ final class MainViewController: CommonViewController {
     private func setupView() {
         view.backgroundColor = .white
         title = viewModel.title
+        addNavigationButtons()
         setupCollectionView()
+    }
+    
+    private func addNavigationButtons() {
+        let rightButton = UIBarButtonItem(barButtonSystemItem: .organize, target: self, action: #selector(layputButtonTap))
+        let leftButton = UIBarButtonItem(barButtonSystemItem: .search, target: self, action: #selector(searchButtonTap))
+        
+        navigationItem.rightBarButtonItem  = rightButton
+        navigationItem.leftBarButtonItem  = leftButton
+    }
+    
+    @objc private func layputButtonTap() {
+        viewModel.switchStyle()
+    }
+    
+    @objc private func searchButtonTap() {
+        viewModel.openSearchView()
     }
     
     private func setupCollectionView() {
@@ -49,20 +66,16 @@ final class MainViewController: CommonViewController {
         collectionView.backgroundColor = .white
         collectionView.contentInset = Constants.contentInset
     }
-    
-    @IBAction func testButton(_ sender: Any) {
-        viewModel.switchStyle()
-    }
 }
 
 extension MainViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         switch viewModel.layoutStyle {
         case .list:
-           let width = (collectionView.frame.width - Constants.spacing - collectionView.contentInset.left - collectionView.contentInset.right)
+            let width = (collectionView.frame.width - Constants.spacing - collectionView.contentInset.left - collectionView.contentInset.right)
             return CGSize(width: width, height: Constants.collectionViewHeight)
         case .gird:
-        let width = (collectionView.frame.width - Constants.spacing - collectionView.contentInset.left - collectionView.contentInset.right).half
+            let width = (collectionView.frame.width - Constants.spacing - collectionView.contentInset.left - collectionView.contentInset.right).half
             return CGSize(width: width, height: Constants.collectionViewHeight)
         }
     }

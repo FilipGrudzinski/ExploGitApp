@@ -1,5 +1,5 @@
 //
-//  Localized.swift
+//  FeedsResponse.swift
 //  ExploGitApp
 //
 //  Created by Filip Grudziński on 21/07/2020.
@@ -8,7 +8,4 @@
 
 import Foundation
 
-enum Localized {
-    static let mainViewTitle = "Git Explorer"
-    static let searchViewTitle = "Search Repo"
-}
+struct FeedsResponse: Decodable { }

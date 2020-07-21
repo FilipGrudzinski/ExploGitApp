@@ -6,9 +6,9 @@ target 'ExploGitApp' do
   use_frameworks!
 
   pod 'Kingfisher'
-pod 'OAuthSwift'
-pod 'KeychainSwift'
-	
+  pod 'OAuthSwift'
+  pod 'KeychainSwift'
+  pod 'SwiftGen'	
 
   # networking
   pod 'Alamofire', '4.7.3'

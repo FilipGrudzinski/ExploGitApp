@@ -21,6 +21,7 @@ protocol MainViewModelProtocol: class {
     
     func onViewDidLoad()
     
+    func openSearchView()
     func switchStyle()
     func selectedItem(_ row: Int)
     func item(at row: Int) -> MainViewRenderable
@@ -53,6 +54,13 @@ final class MainViewModel {
         } .catch { error in
             print(error)
         }
+        
+        worker.fetchFeeds()
+        .done { response in
+            print(response)
+        } . catch { error in
+            print(error)
+        }
     }
 }
 
@@ -76,5 +84,9 @@ extension MainViewModel: MainViewModelProtocol {
     
     func item(at row: Int) -> MainViewRenderable {
         return MainViewRenderable(icon: UIImage(), title: "Row\(row)")
+    }
+    
+    func openSearchView() {
+        coordinator.openSearchView()
     }
 }

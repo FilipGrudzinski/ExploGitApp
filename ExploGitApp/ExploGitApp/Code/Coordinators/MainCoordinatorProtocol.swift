@@ -9,6 +9,8 @@
 import UIKit
 
 protocol MainCoordinatorProtocol: CoordinatorProtocol {
+    func openSearchView()
+    func openDetailsView()
 }
 
 final class MainCoordinator: MainCoordinatorProtocol {
@@ -26,5 +28,16 @@ final class MainCoordinator: MainCoordinatorProtocol {
         navigationController.pushViewController(viewController, animated: true)
         
         parentCoordinator.showRootViewController(rootViewController: navigationController)
+    }
+    
+    func openSearchView() {
+        let viewModel = SearchViewModel(self)
+        let viewController = SearchViewController(with: viewModel)
+        
+        navigationController.pushViewController(viewController, animated: true)
+    }
+    
+    func openDetailsView() {
+        
     }
 }
