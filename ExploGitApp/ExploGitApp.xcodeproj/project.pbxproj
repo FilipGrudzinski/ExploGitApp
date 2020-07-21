@@ -74,6 +74,7 @@
 		DCDF173724C7943400BAE88D /* FiltersCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDF173624C7943400BAE88D /* FiltersCell.swift */; };
 		DCDF173924C7943F00BAE88D /* FiltersCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = DCDF173824C7943E00BAE88D /* FiltersCell.xib */; };
 		DCDF173C24C79A6300BAE88D /* ArrayExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDF173B24C79A6300BAE88D /* ArrayExtension.swift */; };
+		DCDF173E24C79B0500BAE88D /* MainViewCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCDF173D24C79B0500BAE88D /* MainViewCache.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -147,6 +148,7 @@
 		DCDF173624C7943400BAE88D /* FiltersCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FiltersCell.swift; sourceTree = "<group>"; };
 		DCDF173824C7943E00BAE88D /* FiltersCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = FiltersCell.xib; sourceTree = "<group>"; };
 		DCDF173B24C79A6300BAE88D /* ArrayExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ArrayExtension.swift; sourceTree = "<group>"; };
+		DCDF173D24C79B0500BAE88D /* MainViewCache.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewCache.swift; sourceTree = "<group>"; };
 		E6D3DC4609CE2738B9F79408 /* Pods-ExploGitApp.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ExploGitApp.release.xcconfig"; path = "Target Support Files/Pods-ExploGitApp/Pods-ExploGitApp.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -337,6 +339,7 @@
 				DC1AA4FD24C621360002EFA0 /* MainViewController.swift */,
 				DC1AA4FF24C621400002EFA0 /* MainViewController.xib */,
 				DC1AA50124C6214C0002EFA0 /* MainViewModel.swift */,
+				DCDF173D24C79B0500BAE88D /* MainViewCache.swift */,
 			);
 			path = MainViewController;
 			sourceTree = "<group>";
@@ -623,6 +626,7 @@
 				DC1AA55F24C78AD60002EFA0 /* OwnerModel.swift in Sources */,
 				DC1AA4E424C61F950002EFA0 /* CollectionExtension.swift in Sources */,
 				DC1AA51C24C6D9BB0002EFA0 /* RepositoryResponseModel.swift in Sources */,
+				DCDF173E24C79B0500BAE88D /* MainViewCache.swift in Sources */,
 				DC1AA50424C627610002EFA0 /* BaseTargetType.swift in Sources */,
 				DCDF173724C7943400BAE88D /* FiltersCell.swift in Sources */,
 				DC1AA4B824C617EA0002EFA0 /* AppDelegate.swift in Sources */,
